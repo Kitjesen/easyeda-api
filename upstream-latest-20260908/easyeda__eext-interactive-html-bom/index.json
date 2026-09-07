@@ -1,0 +1,60 @@
+{
+  "repository": "easyeda/eext-interactive-html-bom",
+  "url": "https://github.com/easyeda/eext-interactive-html-bom",
+  "checkedAt": "2026-09-07T20:46:02.088Z",
+  "archived": false,
+  "defaultBranch": "main",
+  "license": "Apache-2.0",
+  "pushedAt": "2026-08-21T09:20:05Z",
+  "commit": "430ea9d06a1c975ed3d2c6da83a6686a1f737084",
+  "commitDate": "2026-08-21T09:19:31Z",
+  "commitTitle": "chore: 变更版本号到2.8.1",
+  "latestRelease": {
+    "tag": "v2.8.1",
+    "publishedAt": "2026-08-21T09:20:12Z",
+    "url": "https://github.com/easyeda/eext-interactive-html-bom/releases/tag/v2.8.1"
+  },
+  "treeTruncated": false,
+  "files": [
+    ".edaignore",
+    ".editorconfig",
+    ".gitattributes",
+    ".github/workflows/build.yml",
+    ".gitignore",
+    ".npmrc",
+    ".vscode/extensions.json",
+    ".vscode/settings.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.en.md",
+    "README.md",
+    "build/dist/.gitignore",
+    "build/packaged.ts",
+    "config/esbuild.common.ts",
+    "config/esbuild.prod.ts",
+    "docs/architecture.md",
+    "docs/backlog.md",
+    "docs/元件内的封装丝印/ProLib_pc_2026-04-07.elibz2",
+    "docs/元件内的封装丝印/ProLib_pc_2026-04-07/ProLib_pc_2026-04-07.elibu",
+    "docs/元件内的封装丝印/ProLib_pc_2026-04-07/footprint2.json",
+    "eslint.config.mjs",
+    "extension.json",
+    "iframe/index.html",
+    "images/Ibom1.png",
+    "images/logo.png",
+    "locales/en.json",
+    "locales/extensionJson/en.json",
+    "locales/extensionJson/zh-Hans.json",
+    "locales/zh-Hans.json",
+    "package-lock.json",
+    "package.json",
+    "src/index.ts",
+    "tsconfig.json"
+  ],
+  "referenceFetchWarnings": [
+    {
+      "file": "README.md",
+      "error": "The operation was aborted due to timeout"
+    }
+  ]
+}

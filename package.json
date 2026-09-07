@@ -6,7 +6,7 @@
   "engines": { "node": ">=24 <25" },
   "scripts": {
     "test": "node --test eda-verified/lib.test.mjs",
-    "check:docs": "node api-roadmap-20260908/community-reference/verify-documentation.mjs",
+    "check:docs": "node api-roadmap-20260908/community-reference/verify-documentation.mjs && node pcb-knowledge/verify.mjs",
     "refs": "node tools/reference-hub.mjs",
     "setup:toolchain": "node tools/setup-toolchain.mjs"
   }

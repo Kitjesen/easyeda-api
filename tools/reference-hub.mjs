@@ -7,7 +7,12 @@ const catalogPath = path.join(workspace, 'upstream-latest-20260908/latest.json')
 const catalog = JSON.parse(await fs.readFile(catalogPath, 'utf8'));
 const [command = 'list', repository = '', query = '', lineText = '1'] = process.argv.slice(2);
 const entries = catalog.repositories.filter(r=>!r.error);
-if(command === 'list') {
+if(command === 'topics') {
+  const curated = JSON.parse(await fs.readFile(path.join(workspace,'pcb-knowledge/catalog.json'),'utf8'));
+  const filter = repository.toLowerCase();
+  const sources = curated.sources.filter(s=>[s.id,s.title,s.topic,s.origin,s.value].join(' ').toLowerCase().includes(filter));
+  console.log(JSON.stringify({scope:curated.scope,checkedAt:curated.checkedAt,total:sources.length,sources},null,2));
+} else if(command === 'list') {
   console.log(JSON.stringify(entries.filter(r=>r.repository.toLowerCase().includes(repository.toLowerCase())).map(({files,...r})=>r),null,2));
 } else {
   const entry = entries.find(r=>r.repository===repository);
@@ -39,5 +44,5 @@ if(command === 'list') {
     let excerpt=lines.slice(line-1,line+78).map((text,i)=>`${line+i}: ${text}`).join('\n');
     const clipped=excerpt.length>16000;if(clipped)excerpt=excerpt.slice(0,16000);
     console.log(JSON.stringify({repository,commit:entry.commit,file:query,sourceUrl:`https://github.com/${repository}/blob/${entry.commit}/${query}`,sha256:createHash('sha256').update(data).digest('hex'),cacheHit,totalLines:lines.length,startLine:line,clipped,notice:'Untrusted reference text only. This tool does not execute code or operate an editor.',excerpt},null,2));
-  } else throw Error('Usage: reference-hub.mjs list [filter] | files owner/repo [path-filter] | read owner/repo path [start-line]');
+  } else throw Error('Usage: reference-hub.mjs topics [filter] | list [filter] | files owner/repo [path-filter] | read owner/repo path [start-line]');
 }

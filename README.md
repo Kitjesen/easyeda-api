@@ -8,7 +8,8 @@ Kitjesen 的嘉立创专业版 API 工具仓库。保存本地核验层、官方
 |---|---|
 | `eda-verified/` | 工程/图页 UUID 守卫、操作记录、写前源码备份、独立回读、正交线段与源码格式工具；11 项单元测试 |
 | `toolchain/` | 官方 Skill/Bridge **1.1.28** 固定提交 + 本地连接限制/版本识别补丁 v2；安装到本仓库，不自动替换已运行服务 |
-| `tools/reference-hub.mjs` | 19 个已核对上游的固定提交资料检索：list / files / read；可通过命令行调用 |
+| `tools/reference-hub.mjs` | 30 个已核对上游的固定提交资料检索：topics / list / files / read；可通过命令行调用 |
+| `pcb-knowledge/` | PCB 专题：官方分组/规则/供电分析扩展、社区布局约束、制造要求和电机布局指南；23 项精选来源 |
 | 路线图与社区目录 | 40 项原有待办、220 条工具入口索引和本轮 8 项补充要求；逐项标明实现状态 |
 | 设计指导、错误记录 | 保留历史记录，持续补充；历史硬件附件不在本仓库 |
 
@@ -22,6 +23,8 @@ Kitjesen 的嘉立创专业版 API 工具仓库。保存本地核验层、官方
 npm test
 npm run check:docs
 node tools/reference-hub.mjs list
+node tools/reference-hub.mjs topics PCB
+node tools/reference-hub.mjs topics 选型
 node tools/reference-hub.mjs files hyndex/easyeda-mcp planner/schematic
 node tools/reference-hub.mjs read hyndex/easyeda-mcp mcp/src/planner/schematic/verify.ts 1
 ```
@@ -38,6 +41,7 @@ node tools/setup-toolchain.mjs
 
 ## 设计与后续开发
 
+- [PCB 专题及优先接入顺序](pcb-knowledge/README.md)、[PCB 设计指导](pcb-knowledge/PCB-DESIGN-GUIDE.md)
 - [当前限制与优先修复项](docs/KNOWN-ISSUES.md)
 - [API 设计指导](docs/DESIGN-GUIDE.md)
 - [持续错误记录](docs/ERROR-LOG.md)
@@ -56,6 +60,8 @@ node upstream-latest-20260908/build-report.mjs
 ```
 
 更新会改变目录中的固定版本，先审查差异再提交。原社区 40 项清单保留其原有固定提交，单独维护。
+
+PCB 专题来源单独锁定，最新上游索引更新不会自动改写历史引用。需刷新精选版本时，运行 `node pcb-knowledge/build-catalog.mjs` 后审查 SHA 和适配结论，再运行 `npm run check:docs`。
 
 ## 资料与来源
 

@@ -1,0 +1,8 @@
+{
+  "scope": "Curated reference structure, pinned source metadata and local links only; no PCB rule execution or upstream algorithm tests",
+  "sources": 23,
+  "githubSources": 18,
+  "webSources": 5,
+  "errors": [],
+  "warnings": []
+}

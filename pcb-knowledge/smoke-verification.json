@@ -1,0 +1,63 @@
+{
+  "scope": "Read-only topic CLI and cached pinned-source hash validation; no editor or upstream extension execution",
+  "checkedAt": "2026-09-07T20:49:10.408Z",
+  "tests": [
+    {
+      "term": "PCB",
+      "count": 19,
+      "ids": [
+        "O01",
+        "O02",
+        "O03",
+        "O04",
+        "O05",
+        "O06",
+        "O07",
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C07",
+        "A01",
+        "H01",
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05"
+      ],
+      "pass": true
+    },
+    {
+      "term": "选型",
+      "count": 2,
+      "ids": [
+        "C05",
+        "M02"
+      ],
+      "pass": true
+    },
+    {
+      "term": "原理图",
+      "count": 3,
+      "ids": [
+        "O01",
+        "C06",
+        "H01"
+      ],
+      "pass": true
+    },
+    {
+      "term": "does-not-exist",
+      "count": 0,
+      "ids": [],
+      "pass": true
+    }
+  ],
+  "sourceHashesMatched": 18,
+  "unitTestsPassed": 11,
+  "updateSelection": {
+    "defaultCatalogEntries": 30,
+    "explicitSelectionPreserved": true
+  }
+}

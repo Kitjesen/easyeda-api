@@ -1,0 +1,583 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-07T20:48:20.996Z",
+  "scope": "Curated PCB references; no automatic rule adoption or live editor changes",
+  "sources": [
+    {
+      "id": "O01",
+      "title": "PCB 功能分组",
+      "topic": "pcb-layout",
+      "origin": "官方",
+      "value": "把原理图图页/功能框映射到 PCB 组",
+      "limitation": "源码写入；最近备份会被覆盖；分组不等于功率布局合格",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "easyeda/eext-pcb-component-grouping",
+        "commit": "95421773a0180b9c0f48b4fe382419c673bafe2a",
+        "file": "README.md",
+        "url": "https://github.com/easyeda/eext-pcb-component-grouping/blob/95421773a0180b9c0f48b4fe382419c673bafe2a/README.md",
+        "sha256": "2b4b86e2b8580cda447f1f5220d6ba1b887e8dffc02d487fc22564144365d543",
+        "license": "Apache-2.0",
+        "headCommitDate": "2026-09-01T09:46:25Z",
+        "latestRelease": {
+          "tag": "v1.9.1",
+          "publishedAt": "2026-09-01T09:47:24Z",
+          "url": "https://github.com/easyeda/eext-pcb-component-grouping/releases/tag/v1.9.1"
+        },
+        "supportingFile": {
+          "path": "src/source/source-grouping.ts",
+          "url": "https://github.com/easyeda/eext-pcb-component-grouping/blob/95421773a0180b9c0f48b4fe382419c673bafe2a/src/source/source-grouping.ts",
+          "review": "Located in pinned tree; detailed review scope is stated in topic notes"
+        }
+      }
+    },
+    {
+      "id": "O02",
+      "title": "网络、阻抗与载流规则生成",
+      "topic": "pcb-dfm",
+      "origin": "官方",
+      "value": "按叠层和网络类别形成规则候选",
+      "limitation": "RBF 模型有误差；经验载流公式不是实际板卡额定",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "easyeda/eext-design-rule-generator",
+        "commit": "2ae2ab975fe8af8bf4bb5ce6e8f9bd4b2eb95a7b",
+        "file": "README.md",
+        "url": "https://github.com/easyeda/eext-design-rule-generator/blob/2ae2ab975fe8af8bf4bb5ce6e8f9bd4b2eb95a7b/README.md",
+        "sha256": "5b3d786f18ba19aa4a8e38a999af65022ff1c3c7b0f441bd5e842a50065bfaa6",
+        "license": "Apache-2.0",
+        "headCommitDate": "2026-08-28T06:47:47Z",
+        "latestRelease": {
+          "tag": "v1.8.2",
+          "publishedAt": "2026-08-28T06:48:14Z",
+          "url": "https://github.com/easyeda/eext-design-rule-generator/releases/tag/v1.8.2"
+        },
+        "supportingFile": {
+          "path": "src/core/jlc-current.ts",
+          "url": "https://github.com/easyeda/eext-design-rule-generator/blob/2ae2ab975fe8af8bf4bb5ce6e8f9bd4b2eb95a7b/src/core/jlc-current.ts",
+          "review": "Located in pinned tree; detailed review scope is stated in topic notes"
+        }
+      }
+    },
+    {
+      "id": "O03",
+      "title": "PADEN 电源网络分析",
+      "topic": "pcb-power",
+      "origin": "官方",
+      "value": "由铜皮/过孔与源负载分析压降、电流和功率密度",
+      "limitation": "尚未运行；功率密度不是温度场，不能替代 EMI/瞬态验证",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "easyeda/eext-paden-integration-wasm",
+        "commit": "92c75f057ede5b9c8e7a5db36ae79f8014f5a26b",
+        "file": "README.md",
+        "url": "https://github.com/easyeda/eext-paden-integration-wasm/blob/92c75f057ede5b9c8e7a5db36ae79f8014f5a26b/README.md",
+        "sha256": "71ce9c3e43de695398a61cb04c7f138b1b12b9adce49415bbc266111ee10cc8e",
+        "license": "Apache-2.0",
+        "headCommitDate": "2026-08-05T02:36:29Z",
+        "latestRelease": {
+          "tag": "v1.1.10",
+          "publishedAt": "2026-08-04T08:27:37Z",
+          "url": "https://github.com/easyeda/eext-paden-integration-wasm/releases/tag/v1.1.10"
+        },
+        "supportingFile": {
+          "path": "go-service/internal/solver/solver.go",
+          "url": "https://github.com/easyeda/eext-paden-integration-wasm/blob/92c75f057ede5b9c8e7a5db36ae79f8014f5a26b/go-service/internal/solver/solver.go",
+          "review": "Located in pinned tree; detailed review scope is stated in topic notes"
+        }
+      }
+    },
+    {
+      "id": "O04",
+      "title": "PCB 网络和坐标报告",
+      "topic": "pcb-dfm",
+      "origin": "官方",
+      "value": "取得网络长度、焊盘坐标及板级统计",
+      "limitation": "单位、板框和导出版本需独立核验",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "easyeda/eext-export-design-report",
+        "commit": "31a8cfec95bcae13e981b912c6bc86025062dca0",
+        "file": "README.md",
+        "url": "https://github.com/easyeda/eext-export-design-report/blob/31a8cfec95bcae13e981b912c6bc86025062dca0/README.md",
+        "sha256": "03bb0e07fb790ea55ee7d09d7cf0dfd60a976e18649cc435a5100f05362bc413",
+        "license": "Apache-2.0",
+        "headCommitDate": "2026-08-03T02:54:25Z",
+        "latestRelease": {
+          "tag": "v1.0.17",
+          "publishedAt": "2026-08-03T02:54:54Z",
+          "url": "https://github.com/easyeda/eext-export-design-report/releases/tag/v1.0.17"
+        },
+        "supportingFile": {
+          "path": "src/index.ts",
+          "url": "https://github.com/easyeda/eext-export-design-report/blob/31a8cfec95bcae13e981b912c6bc86025062dca0/src/index.ts",
+          "review": "Located in pinned tree; detailed review scope is stated in topic notes"
+        }
+      }
+    },
+    {
+      "id": "O05",
+      "title": "Gerber 转分层 SVG",
+      "topic": "pcb-dfm",
+      "origin": "官方",
+      "value": "从制造输出生成可观察的铜层/丝印等图像",
+      "limitation": "尚未运行；网络标注也引用画布信息，注意镜像和版本一致性",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "easyeda/eext-export-pcb-to-svg",
+        "commit": "f68898d18c8279e2aaf84a5b2ff07969ebeb005e",
+        "file": "README.md",
+        "url": "https://github.com/easyeda/eext-export-pcb-to-svg/blob/f68898d18c8279e2aaf84a5b2ff07969ebeb005e/README.md",
+        "sha256": "8d85f80c311749899e35cee3bbf2650647b98f8abd71937f16415e593c101bb8",
+        "license": "Apache-2.0",
+        "headCommitDate": "2026-08-19T14:02:23Z",
+        "latestRelease": {
+          "tag": "v1.2.0",
+          "publishedAt": "2026-08-19T10:31:36Z",
+          "url": "https://github.com/easyeda/eext-export-pcb-to-svg/releases/tag/v1.2.0"
+        },
+        "supportingFile": {
+          "path": "src/gerber-source.ts",
+          "url": "https://github.com/easyeda/eext-export-pcb-to-svg/blob/f68898d18c8279e2aaf84a5b2ff07969ebeb005e/src/gerber-source.ts",
+          "review": "Located in pinned tree; detailed review scope is stated in topic notes"
+        }
+      }
+    },
+    {
+      "id": "O06",
+      "title": "FreeCAD 机电协同",
+      "topic": "pcb-layout",
+      "origin": "官方",
+      "value": "检查壳体、散热片、插头和卧倒电解的三维关系",
+      "limitation": "依赖 FreeCAD 与宏；双向位置同步需纳入统一操作状态",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "easyeda/eext-mcad-integration-with-freecad",
+        "commit": "e3c30a527194d34def8ada4f84451de298caa048",
+        "file": "README.md",
+        "url": "https://github.com/easyeda/eext-mcad-integration-with-freecad/blob/e3c30a527194d34def8ada4f84451de298caa048/README.md",
+        "sha256": "46e37d632ff11dff483604cd5c9e7a70b1e5a1ae77532378976297bd9e7559ef",
+        "license": "Apache-2.0",
+        "headCommitDate": "2026-08-26T08:23:10Z",
+        "latestRelease": {
+          "tag": "v1.3.0",
+          "publishedAt": "2026-08-26T08:23:36Z",
+          "url": "https://github.com/easyeda/eext-mcad-integration-with-freecad/releases/tag/v1.3.0"
+        }
+      }
+    },
+    {
+      "id": "O07",
+      "title": "轻量交互式 BOM",
+      "topic": "components",
+      "origin": "官方",
+      "value": "位号、值、封装与 PCB 图联动",
+      "limitation": "README 指出功能少于原生 iBOM；不自动验证替代料电气兼容",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "easyeda/eext-interactive-bom",
+        "commit": "3606355f002a9380fe2f7b956b2969b09df65545",
+        "file": "README.md",
+        "url": "https://github.com/easyeda/eext-interactive-bom/blob/3606355f002a9380fe2f7b956b2969b09df65545/README.md",
+        "sha256": "6ce579c5ac1417ba99118cb148a7575a0eca48e2e4c0f20f722901d2937761b3",
+        "license": "Apache-2.0",
+        "headCommitDate": "2026-07-30T14:00:41Z",
+        "latestRelease": {
+          "tag": "v1.0.1",
+          "publishedAt": "2026-06-16T02:35:29Z",
+          "url": "https://github.com/easyeda/eext-interactive-bom/releases/tag/v1.0.1"
+        }
+      }
+    },
+    {
+      "id": "O08",
+      "title": "器件属性更新与替换",
+      "topic": "components",
+      "origin": "官方",
+      "value": "从指定器件库匹配采购属性和器件",
+      "limitation": "整件替换可改变封装和脚序；必须保留并比较身份与网络",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "easyeda/eext-update-components-attributes",
+        "commit": "b26080edcc9e5e3dddadadda33d4e329973f2fc0",
+        "file": "README.md",
+        "url": "https://github.com/easyeda/eext-update-components-attributes/blob/b26080edcc9e5e3dddadadda33d4e329973f2fc0/README.md",
+        "sha256": "a5847fc2b9abe420fb7e27e881c5bc124ea2e08409ebb0289b5bc5070f107322",
+        "license": "Apache-2.0",
+        "headCommitDate": "2026-07-30T14:01:54Z",
+        "latestRelease": {
+          "tag": "v2.4.3",
+          "publishedAt": "2026-06-15T12:02:52Z",
+          "url": "https://github.com/easyeda/eext-update-components-attributes/releases/tag/v2.4.3"
+        },
+        "supportingFile": {
+          "path": "src/index.ts",
+          "url": "https://github.com/easyeda/eext-update-components-attributes/blob/b26080edcc9e5e3dddadadda33d4e329973f2fc0/src/index.ts",
+          "review": "Located in pinned tree; detailed review scope is stated in topic notes"
+        }
+      }
+    },
+    {
+      "id": "O09",
+      "title": "完整 iBOM 对接入口",
+      "topic": "components",
+      "origin": "官方",
+      "value": "从嘉立创对接交互式装配 BOM",
+      "limitation": "本轮审查 README/目录，未安装；功能以该扩展版本为准",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "easyeda/eext-interactive-html-bom",
+        "commit": "430ea9d06a1c975ed3d2c6da83a6686a1f737084",
+        "file": "README.md",
+        "url": "https://github.com/easyeda/eext-interactive-html-bom/blob/430ea9d06a1c975ed3d2c6da83a6686a1f737084/README.md",
+        "sha256": "0ec178092f19338bf59a5987c802e56f0c5d2d156e01c673970a50c9c5cb6cfe",
+        "license": "Apache-2.0",
+        "headCommitDate": "2026-08-21T09:19:31Z",
+        "latestRelease": {
+          "tag": "v2.8.1",
+          "publishedAt": "2026-08-21T09:20:12Z",
+          "url": "https://github.com/easyeda/eext-interactive-html-bom/releases/tag/v2.8.1"
+        }
+      }
+    },
+    {
+      "id": "C01",
+      "title": "PCB 布局与工艺规则手册",
+      "topic": "pcb-layout",
+      "origin": "社区",
+      "value": "组织布局、走线、铺铜、装配、丝印和检查清单",
+      "limitation": "数值按具体工艺重新审查；通用默认值不能用于电机相线",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "zhoushoujianwork/easyeda-agent",
+        "commit": "62c0db9464bfa78cc481b907dca778b24175287c",
+        "file": "skills/easyeda-agent/references/pcb-design-rules.md",
+        "url": "https://github.com/zhoushoujianwork/easyeda-agent/blob/62c0db9464bfa78cc481b907dca778b24175287c/skills/easyeda-agent/references/pcb-design-rules.md",
+        "sha256": "5b608453269df9a63a75b788f34fd698efb05d361c3b55bcb61e78a18f42828a",
+        "license": "NOASSERTION",
+        "headCommitDate": "2026-09-07T17:59:35Z",
+        "latestRelease": {
+          "tag": "v1.4.3",
+          "publishedAt": "2026-09-07T18:00:27Z",
+          "url": "https://github.com/zhoushoujianwork/easyeda-agent/releases/tag/v1.4.3"
+        },
+        "supportingFile": {
+          "path": "internal/app/pcb_rules.go",
+          "url": "https://github.com/zhoushoujianwork/easyeda-agent/blob/62c0db9464bfa78cc481b907dca778b24175287c/internal/app/pcb_rules.go",
+          "review": "Located in pinned tree; detailed review scope is stated in topic notes"
+        }
+      }
+    },
+    {
+      "id": "C02",
+      "title": "PCB 约束与检查结果结构",
+      "topic": "pcb-dfm",
+      "origin": "社区",
+      "value": "板框、层叠、制造、装配和测试性报告结构",
+      "limitation": "基于输入模型；未取得真实几何的数据不可标为通过",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "oaslananka/easyeda-mcp-pro",
+        "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+        "file": "docs/pcb-constraints.md",
+        "url": "https://github.com/oaslananka/easyeda-mcp-pro/blob/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/docs/pcb-constraints.md",
+        "sha256": "aec3e850a4c9dedc5343fb332360b5a3f90967af72aaa289265910adf2d0b82e",
+        "license": "MIT",
+        "headCommitDate": "2026-09-04T00:51:53Z",
+        "latestRelease": {
+          "tag": "easyeda-mcp-pro-v1.0.1",
+          "publishedAt": "2026-08-28T03:20:53Z",
+          "url": "https://github.com/oaslananka/easyeda-mcp-pro/releases/tag/easyeda-mcp-pro-v1.0.1"
+        },
+        "supportingFile": {
+          "path": "src/pcb-constraints/validation.ts",
+          "url": "https://github.com/oaslananka/easyeda-mcp-pro/blob/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/pcb-constraints/validation.ts",
+          "review": "Located in pinned tree; detailed review scope is stated in topic notes"
+        }
+      }
+    },
+    {
+      "id": "C03",
+      "title": "功能区规划与尺寸输入",
+      "topic": "pcb-layout",
+      "origin": "社区",
+      "value": "以真实尺寸、功能角色和机械约束规划放置",
+      "limitation": "代码包含矩形/分次检查简化，不是功率/三维最优布局求解器",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "oaslananka/easyeda-mcp-pro",
+        "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+        "file": "src/pcb-layout/floorplan.ts",
+        "url": "https://github.com/oaslananka/easyeda-mcp-pro/blob/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/pcb-layout/floorplan.ts",
+        "sha256": "a08b75a2b3ae189bfd2a4fc9f5004e6259ac060da9c190d1674378167b173542",
+        "license": "MIT",
+        "headCommitDate": "2026-09-04T00:51:53Z",
+        "latestRelease": {
+          "tag": "easyeda-mcp-pro-v1.0.1",
+          "publishedAt": "2026-08-28T03:20:53Z",
+          "url": "https://github.com/oaslananka/easyeda-mcp-pro/releases/tag/easyeda-mcp-pro-v1.0.1"
+        },
+        "supportingFile": {
+          "path": "docs/high-level-pcb-layout.md",
+          "url": "https://github.com/oaslananka/easyeda-mcp-pro/blob/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/docs/high-level-pcb-layout.md",
+          "review": "Located in pinned tree; detailed review scope is stated in topic notes"
+        }
+      }
+    },
+    {
+      "id": "C04",
+      "title": "插头和装配可达性检查",
+      "topic": "pcb-layout",
+      "origin": "社区",
+      "value": "按插拔方向、本体、护套、线缆及壳体检查位置",
+      "limitation": "放置约束不等于铜皮禁区；不存在通用板边伸出量",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "biosshot/easyeda-copilot",
+        "commit": "bf10f7f9c80156abdbf80c45860051026e74b799",
+        "file": "mcp/docs/pcb-layout/mechanical-validation.md",
+        "url": "https://github.com/biosshot/easyeda-copilot/blob/bf10f7f9c80156abdbf80c45860051026e74b799/mcp/docs/pcb-layout/mechanical-validation.md",
+        "sha256": "1426702026fd14e2ff1a79df2ca79187f0c0d414bbde659daf7b23b6c0aebf71",
+        "license": "MIT",
+        "headCommitDate": "2026-09-05T16:44:44Z",
+        "latestRelease": {
+          "tag": "v1.1.8",
+          "publishedAt": "2026-09-01T15:50:07Z",
+          "url": "https://github.com/biosshot/easyeda-copilot/releases/tag/v1.1.8"
+        }
+      }
+    },
+    {
+      "id": "C05",
+      "title": "选型与 BOM 质量缺项",
+      "topic": "components",
+      "origin": "社区",
+      "value": "定位 MPN、封装和供应商等数据缺项",
+      "limitation": "数据报告不等于 MOS、LDO 或替代料的电气/热验证",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "oaslananka/easyeda-mcp-pro",
+        "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+        "file": "src/bom-quality/quality.ts",
+        "url": "https://github.com/oaslananka/easyeda-mcp-pro/blob/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/bom-quality/quality.ts",
+        "sha256": "16b7591232a690d27fa666dd1aa47f6cd2d4794ca242b19d1514b94e32a7f7ee",
+        "license": "MIT",
+        "headCommitDate": "2026-09-04T00:51:53Z",
+        "latestRelease": {
+          "tag": "easyeda-mcp-pro-v1.0.1",
+          "publishedAt": "2026-08-28T03:20:53Z",
+          "url": "https://github.com/oaslananka/easyeda-mcp-pro/releases/tag/easyeda-mcp-pro-v1.0.1"
+        }
+      }
+    },
+    {
+      "id": "C06",
+      "title": "原理图引脚角色与 ERC",
+      "topic": "schematic",
+      "origin": "社区",
+      "value": "构造有来源的引脚角色与连接检查",
+      "limitation": "名称推断仅作线索；未知角色和芯片差异不能被默认掩盖",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "oaslananka/easyeda-mcp-pro",
+        "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+        "file": "src/schematic-model/pin-semantics.ts",
+        "url": "https://github.com/oaslananka/easyeda-mcp-pro/blob/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/schematic-model/pin-semantics.ts",
+        "sha256": "da1c818224b9b6bbb6c28f612b129c209627892f2853409f918f142462ebc790",
+        "license": "MIT",
+        "headCommitDate": "2026-09-04T00:51:53Z",
+        "latestRelease": {
+          "tag": "easyeda-mcp-pro-v1.0.1",
+          "publishedAt": "2026-08-28T03:20:53Z",
+          "url": "https://github.com/oaslananka/easyeda-mcp-pro/releases/tag/easyeda-mcp-pro-v1.0.1"
+        }
+      }
+    },
+    {
+      "id": "C07",
+      "title": "原生 InteractiveHtmlBom",
+      "topic": "components",
+      "origin": "社区",
+      "value": "交互式装配定位、BOM 与 PCB 联动的上游实现",
+      "limitation": "本轮只查 README/目录与许可；不能当作直接操作嘉立创的 MCP",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "openscopeproject/InteractiveHtmlBom",
+        "commit": "5f3dec9a62f24cfc12e07148743d67f6da3c637e",
+        "file": "README.md",
+        "url": "https://github.com/openscopeproject/InteractiveHtmlBom/blob/5f3dec9a62f24cfc12e07148743d67f6da3c637e/README.md",
+        "sha256": "dff1c7cf06d4e9caab04032e1bca648eae2eade5e17ee96131e80d305e31b49f",
+        "license": "MIT",
+        "headCommitDate": "2026-09-02T23:33:21Z",
+        "latestRelease": {
+          "tag": "v2.11.2",
+          "publishedAt": "2026-05-24T05:28:57Z",
+          "url": "https://github.com/openscopeproject/InteractiveHtmlBom/releases/tag/v2.11.2"
+        }
+      }
+    },
+    {
+      "id": "A01",
+      "title": "官方 PCB API 定义",
+      "topic": "pcb-dfm",
+      "origin": "官方",
+      "value": "查 DRC、器件与焊盘 API 的真实接口定义",
+      "limitation": "文档能力与当前客户端运行时分别验证",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "easyeda/easyeda-api-skill",
+        "commit": "8895d98637dab59ed9de10bb2a340e3e4be26d99",
+        "file": "references/classes/PCB_Drc.md",
+        "url": "https://github.com/easyeda/easyeda-api-skill/blob/8895d98637dab59ed9de10bb2a340e3e4be26d99/references/classes/PCB_Drc.md",
+        "sha256": "4507b6fe7defb65178e28a213c7e3d9189ca06e8bede9109967da1fc4b8e15b6",
+        "license": null,
+        "headCommitDate": "2026-08-27T09:27:35Z",
+        "latestRelease": null,
+        "supportingFile": {
+          "path": "references/classes/PCB_PrimitiveComponent.md",
+          "url": "https://github.com/easyeda/easyeda-api-skill/blob/8895d98637dab59ed9de10bb2a340e3e4be26d99/references/classes/PCB_PrimitiveComponent.md",
+          "review": "Located in pinned tree; detailed review scope is stated in topic notes"
+        }
+      }
+    },
+    {
+      "id": "H01",
+      "title": "moteus 机器人驱动硬件",
+      "topic": "pcb-power",
+      "origin": "硬件作者",
+      "value": "定位机器人驱动原理图、PCB 与设计说明",
+      "limitation": "未逐层审核实际 PCB；51V/54V 文档不能直接应用于 58.8V，软件 Release 不是板卡修订",
+      "status": "reference_collected_not_integrated",
+      "evidence": "Selected documentation/code sections or README and tree review; upstream tests and live editor not run",
+      "source": {
+        "kind": "github",
+        "repository": "mjbots/moteus",
+        "commit": "fdc6e318194443213c669d28d72e40be38147d2b",
+        "file": "README.md",
+        "url": "https://github.com/mjbots/moteus/blob/fdc6e318194443213c669d28d72e40be38147d2b/README.md",
+        "sha256": "2c3a6a18b4fc19cc43d57cf810afee229ba267838c75b2fa46a61844f84e0e93",
+        "license": "Apache-2.0",
+        "headCommitDate": "2026-09-04T19:50:02Z",
+        "latestRelease": {
+          "tag": "rust/v0.5.5",
+          "publishedAt": "2026-09-04T20:14:08Z",
+          "url": "https://github.com/mjbots/moteus/releases/tag/rust/v0.5.5"
+        },
+        "supportingFile": {
+          "path": "hw/n1/DESIGN.md",
+          "url": "https://github.com/mjbots/moteus/blob/fdc6e318194443213c669d28d72e40be38147d2b/hw/n1/DESIGN.md",
+          "review": "Located in pinned tree; detailed review scope is stated in topic notes"
+        }
+      }
+    },
+    {
+      "id": "M01",
+      "title": "TI 电机驱动 PCB 布局指南",
+      "topic": "pcb-power",
+      "origin": "器件厂商",
+      "value": "回流、旁路、栅极、分流采样与热布局依据",
+      "limitation": "按实际驱动芯片选择适用拓扑；本轮未作实板分析",
+      "status": "reference_collected_not_integrated",
+      "evidence": "SLVA959B，2021-10 修订；本轮阅读 §§2–7 相关文本",
+      "source": {
+        "kind": "web",
+        "url": "https://www.ti.com/lit/an/slva959b/slva959b.pdf",
+        "revision": "SLVA959B，2021-10 修订；本轮阅读 §§2–7 相关文本"
+      }
+    },
+    {
+      "id": "M02",
+      "title": "DRV835x 数据手册布局与选型条件",
+      "topic": "pcb-power",
+      "origin": "器件厂商",
+      "value": "按具体型号核对驱动回路和外围",
+      "limitation": "8350/8353、SPI/硬件接口、R 变体不能混用；当前工程器件需回读确认",
+      "status": "reference_collected_not_integrated",
+      "evidence": "SLVSDY6A；本轮阅读 §11 及型号范围",
+      "source": {
+        "kind": "web",
+        "url": "https://www.ti.com/lit/ds/symlink/drv8350.pdf",
+        "revision": "SLVSDY6A；本轮阅读 §11 及型号范围"
+      }
+    },
+    {
+      "id": "M03",
+      "title": "JLCPCB 铜厚与制造下限",
+      "topic": "pcb-dfm",
+      "origin": "制造商",
+      "value": "将层数、铜厚与线宽/间距限制绑定",
+      "limitation": "最终以选定订单工艺为准；工艺下限不是载流或耐压合格值",
+      "status": "reference_collected_not_integrated",
+      "evidence": "2026-09-08 查阅制造表",
+      "source": {
+        "kind": "web",
+        "url": "https://jlcpcb.com/help/article/jlcpcb-copper-weight",
+        "revision": "2026-09-08 查阅制造表"
+      }
+    },
+    {
+      "id": "M04",
+      "title": "嘉立创专业版设计规则",
+      "topic": "pcb-dfm",
+      "origin": "官方",
+      "value": "理解默认/专用规则、间距和规则分配",
+      "limitation": "配置 DRC 不能证明热、电气回流或器件选型正确",
+      "status": "reference_collected_not_integrated",
+      "evidence": "2026-09-08 查阅规则管理和间距章节",
+      "source": {
+        "kind": "web",
+        "url": "https://prodocs.lceda.cn/cn/pcb/design-design-rule/",
+        "revision": "2026-09-08 查阅规则管理和间距章节"
+      }
+    },
+    {
+      "id": "M05",
+      "title": "嘉立创专业版约束区域",
+      "topic": "pcb-layout",
+      "origin": "官方",
+      "value": "明确区域内特殊线宽、过孔与间距规则",
+      "limitation": "不同 API 的 placement keepout/copper keepout 不是同一种对象",
+      "status": "reference_collected_not_integrated",
+      "evidence": "2026-09-08 查阅",
+      "source": {
+        "kind": "web",
+        "url": "https://prodocs.lceda.cn/cn/pcb/place-constraint-region/",
+        "revision": "2026-09-08 查阅"
+      }
+    }
+  ]
+}

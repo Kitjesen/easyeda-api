@@ -11,13 +11,15 @@ async function api(endpoint) {
 }
 const search = await api('search/repositories?q=easyeda+mcp+in:name,description&sort=updated&order=desc&per_page=20');
 await fs.writeFile(path.join(root,'discovery.json'), JSON.stringify({ checkedAt:new Date().toISOString(), totalCount:search.total_count, items:search.items.map(r=>({repository:r.full_name,description:r.description,url:r.html_url,updatedAt:r.updated_at,pushedAt:r.pushed_at,archived:r.archived})) },null,2));
-const queue = process.argv.length > 2 ? process.argv.slice(2) : [
+const previous = await fs.readFile(path.join(root,'latest.json'),'utf8').then(JSON.parse).catch(()=>({repositories:[]}));
+const seeds = [
   'easyeda/easyeda-api-skill','easyeda/eext-run-api-gateway','easyeda/easyeda-enhanced-schematic-skill',
   'Dogmeat88/EasyEDA-MCP','oaslananka/easyeda-mcp-pro','cheewee2000/easyeda-mcp','biosshot/easyeda-copilot','Spectoda/easyeda-mcp',
   'InkRoad/jlc-mcp','VLab-Software/easyeda_mcp','hiroki-sawada-a/easy_eda_mcp','Atmel2005/EasyEDA_MCP','sheares/easyeda-mcp-fix',
   'zhoushoujianwork/easyeda-agent','hyndex/easyeda-mcp','easyeda/jlc-mcli',
   'jan-guenter/easyeda-pro-agent-plugin','carter-howell/pcb-designer','salitronic/eda-agent',
 ];
+const queue = process.argv.length > 2 ? process.argv.slice(2) : [...new Set([...seeds,...previous.repositories.map(r=>r.repository)])];
 const results=[];
 async function worker() {
   while(queue.length) {
@@ -32,16 +34,20 @@ async function worker() {
       await fs.mkdir(directory,{recursive:true});
       await fs.writeFile(path.join(directory,'index.json'),JSON.stringify(r,null,2));
       for(const file of [files.find(x=>/^readme(?:\.md)?$/i.test(x)),files.find(x=>x==='package.json')].filter(Boolean)) {
-        const response=await fetch(`https://raw.githubusercontent.com/${repository}/${commit.sha}/${file}`,{signal:AbortSignal.timeout(15000)});
-        if(!response.ok)throw Error(`raw ${response.status} ${file}`);
-        await fs.writeFile(path.join(directory,file==='package.json'?'package.source.json':'README.source.md'),await response.text());
+        try {
+          const response=await fetch(`https://raw.githubusercontent.com/${repository}/${commit.sha}/${file}`,{signal:AbortSignal.timeout(15000)});
+          if(!response.ok)throw Error(`raw ${response.status} ${file}`);
+          await fs.writeFile(path.join(directory,file==='package.json'?'package.source.json':'README.source.md'),await response.text());
+        } catch(error) {
+          (r.referenceFetchWarnings ??= []).push({file,error:String(error.message).slice(0,150)});
+        }
       }
+      await fs.writeFile(path.join(directory,'index.json'),JSON.stringify(r,null,2));
       results.push(r);
     } catch(e) {results.push({repository,error:String(e.message).slice(0,250)});}
   }
 }
 await Promise.all(Array.from({length:4},worker));
-const previous = await fs.readFile(path.join(root,'latest.json'),'utf8').then(JSON.parse).catch(()=>({repositories:[]}));
 const merged = [...new Map([...previous.repositories,...results].map(r=>[r.repository,r])).values()];
 await fs.writeFile(path.join(root,'latest.json'),JSON.stringify({checkedAt:new Date().toISOString(),scope:'Default-branch commit and latest stable GitHub release checked independently; no installation performed',repositories:merged},null,2));
 console.log(JSON.stringify({discovered:search.total_count,searchTop:search.items.slice(0,10).map(x=>({repo:x.full_name,pushedAt:x.pushed_at})),checked:results.map(({files,...r})=>r)},null,2));
