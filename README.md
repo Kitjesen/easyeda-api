@@ -10,6 +10,7 @@ Kitjesen 的嘉立创专业版 API 工具仓库。保存本地核验层、官方
 | `toolchain/` | 官方 Skill/Bridge **1.1.28** 固定提交 + 本地连接限制/版本识别补丁 v2；安装到本仓库，不自动替换已运行服务 |
 | `tools/reference-hub.mjs` | 30 个已核对上游的固定提交资料检索：topics / list / files / read；可通过命令行调用 |
 | `pcb-knowledge/` | PCB 专题：官方分组/规则/供电分析扩展、社区布局约束、制造要求和电机布局指南；23 项精选来源 |
+| `skills/motor-power-stage-layout/` | 可调用的电机功率级布局 Skill；9 份专题参考，覆盖输入、半桥/栅极、电容/预充、采样、铜热机械、执行验收、预算、来源和场景 |
 | 路线图与社区目录 | 40 项原有待办、220 条工具入口索引和本轮 8 项补充要求；逐项标明实现状态 |
 | 设计指导、错误记录 | 保留历史记录，持续补充；历史硬件附件不在本仓库 |
 
@@ -41,6 +42,7 @@ node tools/setup-toolchain.mjs
 
 ## 设计与后续开发
 
+- [电机功率级布局 Skill](skills/motor-power-stage-layout/SKILL.md)：专项入口；[详细来源](skills/motor-power-stage-layout/references/sources.md) 和 [预算示例](skills/motor-power-stage-layout/references/budget-examples.md)
 - [PCB 专题及优先接入顺序](pcb-knowledge/README.md)、[PCB 设计指导](pcb-knowledge/PCB-DESIGN-GUIDE.md)
 - [当前限制与优先修复项](docs/KNOWN-ISSUES.md)
 - [API 设计指导](docs/DESIGN-GUIDE.md)
@@ -51,6 +53,10 @@ node tools/setup-toolchain.mjs
 - [历史原理图设计指导](stm32g431-review-20260907/原理图设计指导.md)、[历史错误与经验](stm32g431-review-20260907/错误与经验记录.md)
 
 社区资料检索已可调用；社区 MCP 写图服务、离线布局算法、电源树及仿真模块尚未接入。不能把列入清单当作已经实现。
+
+电机布局 Skill 的源文件由本仓库维护。本机通过 `C:\Users\99563\.codex\skills\motor-power-stage-layout` 目录联接使用同一份文件，后续更新不需要维护两份副本。新会话发现 Skill 后可显式使用 `$motor-power-stage-layout`；也允许按电机功率级 PCB 任务自动匹配。若当前会话尚未刷新目录，可直接读取上述 `SKILL.md` 应用规则。
+
+在其他机器安装时，将该 Skill 整个目录复制或联接到该机器的 Codex Skills 目录；不要覆盖已有同名内容。Skill 提供工作方法、检查与计算依据，不自带自动布板器，也不表示已验证当前硬件或解决 Bridge 的已知问题。
 
 手动更新参考目录：
 

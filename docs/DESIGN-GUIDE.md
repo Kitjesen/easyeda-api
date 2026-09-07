@@ -4,6 +4,8 @@
 
 PCB 工作需同时阅读 [PCB 专题](../pcb-knowledge/README.md) 和 [PCB 设计指导](../pcb-knowledge/PCB-DESIGN-GUIDE.md)，以功率回路、真实机械/制造条件和实际器件为约束。仅靠原理图排版规则或通用自动布线参数不足以完成电机板设计。
 
+电机功率级任务进一步使用 [motor-power-stage-layout](../skills/motor-power-stage-layout/SKILL.md)，按模块读取详细规则和验收条件。检查结果需定位到实际位号/焊盘/网络/层，不以“紧凑”“整齐”替代电气证据；每项数值约束标明来源和适用条件。
+
 ## 一次修改的完整流程
 
 1. 读取唯一窗口、工程 UUID、图页 UUID、实际 API 能力。记录当前版本和原始图面。

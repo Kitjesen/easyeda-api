@@ -1,0 +1,5 @@
+interface:
+  display_name: "电机功率级布局"
+  short_description: "检查三相功率级 PCB 的换流、栅极、采样、铜皮、散热与装配"
+policy:
+  allow_implicit_invocation: true
