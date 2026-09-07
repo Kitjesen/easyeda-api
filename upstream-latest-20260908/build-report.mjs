@@ -1,0 +1,60 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.dirname(fileURLToPath(import.meta.url));
+const data=JSON.parse(await fs.readFile(path.join(root,'latest.json'),'utf8'));
+const priority=['zhoushoujianwork/easyeda-agent','hyndex/easyeda-mcp','oaslananka/easyeda-mcp-pro','biosshot/easyeda-copilot','easyeda/jlc-mcli','easyeda/easyeda-enhanced-schematic-skill','jan-guenter/easyeda-pro-agent-plugin','InkRoad/jlc-mcp'];
+const descriptions={
+ 'zhoushoujianwork/easyeda-agent':'重点评估：规范连接数据、功能 Lib 组合、最小差异 Apply 与逐脚回读；使用自己的 Go daemon/连接器，需要适配，不能直接叠加运行。',
+ 'hyndex/easyeda-mcp':'重点借鉴：离线排版、几何重建连接集合、局部 DRC；算法需要适配我们的符号/单位/结点语义。',
+ 'oaslananka/easyeda-mcp-pro':'继续重点借鉴电源树、BOM、布局 QA、仿真与导出清单；现有锁定提交仍是默认分支最新。',
+ 'biosshot/easyeda-copilot':'可复用的电路表达、操作管理和 PCB 预览；需其扩展和 MCP，不是官方 Gateway 的即插即用替换。',
+ 'easyeda/jlc-mcli':'官方 CLI/MCP 单一命令树框架，package 0.2.0、README 标为 Preview；适合将我们的工具同时暴露到 shell 和 MCP，不自带 EDA 绘图能力。',
+ 'easyeda/easyeda-enhanced-schematic-skill':'官方原理图放置/引脚扇出工作流参考；不要把每脚网络标签策略直接用于整页紧凑排版。',
+ 'jan-guenter/easyeda-pro-agent-plugin':'借鉴固定版本读取、PNG 校验、SQLite 检查点与未知任务隔离。原实现依赖 Linux x86_64/Bubblewrap，生产写入未启用，不适合直接安装到我们当前 Windows 写图链路。',
+ 'InkRoad/jlc-mcp':'项目明确暂停在 0.19.1，原因涉及大规模图纸工作流使编辑器无响应；优先参考失败案例与读取预算，不推荐启用其高层写图。',
+ 'Dogmeat88/EasyEDA-MCP':'精确引脚、图元提交、焊盘几何的参考保留；默认分支最近提交是 4 月，不称为最新活跃方案。',
+ 'cheewee2000/easyeda-mcp':'官方 Bridge 薄包装、网表/PCB 同步预演仍有价值；默认分支 7 月，许可需在复制代码前确认。',
+ 'Spectoda/easyeda-mcp':'早期骨架/mock 证据，参考架构与测试，不能作为已实现的整套自动设计能力。',
+ 'carter-howell/pcb-designer':'新近更新的 Copilot 衍生项目，重点是本地模型、工具精简和发布检查；本轮仅 README/目录审查，不因时间新就优先替换。',
+ 'salitronic/eda-agent':'多后端，主要成熟工具面向 Altium；不能把总工具数当成嘉立创的可用能力。',
+ 'hiroki-sawada-a/easy_eda_mcp':'Bun、ngspice、FreeRouting 路线参考；与官方 Bridge 端口范围冲突，不能直接并启。',
+ 'VLab-Software/easyeda_mcp':'独立桥接实现，作为接口分层备选参考；当前没有移植或实机验证。',
+ 'Atmel2005/EasyEDA_MCP':'Python MCP/独立 WS 方案参考；本轮只查目录与说明，未测试。',
+ 'sheares/easyeda-mcp-fix':'源码格式经验可参考；pushedAt 比默认分支提交新，说明推送时间不能直接代表主分支代码更新。',
+ 'easyeda/easyeda-api-skill':'官方主线仍为当前锁定提交；没有发现需要再次更新的主线代码。',
+ 'easyeda/eext-run-api-gateway':'主分支 9 月更新，最新正式 Release 仍 v1.0.5；主分支与已发行扩展分别管理。',
+};
+const ordered=[...data.repositories].sort((a,b)=>(priority.indexOf(a.repository)<0?99:priority.indexOf(a.repository))-(priority.indexOf(b.repository)<0?99:priority.indexOf(b.repository)));
+const md=['# 最新上游核对与可调用方案','','核对日期：2026-09-08（北京时间）。本轮通过 GitHub API 按更新时间发现 32 个匹配结果，并核对其中及前轮相关的 **19 个仓库**。表内提交/发行日期统一使用 UTC，完整时间与 SHA 见 [latest.json](latest.json)。这不是互联网全量清单。','','“最新”分别核对默认分支 commit、GitHub 最新正式 release、包版本；不使用搜索缓存日期代替，也不把 pushedAt 当作主分支版本。没有 Release 只代表该仓库未取得正式发行对象，不代表不存在可运行代码。','','## 结论与取舍','','| 仓库 | 默认分支最新提交（UTC） | 最新正式 Release（UTC） | 对我们的价值和接入条件 |','|---|---|---|---|'];
+for(const r of ordered){if(r.error){md.push(`| ${r.repository} | 查询失败 | — | ${r.error.replaceAll('|','/')} |`);continue;}md.push(`| [${r.repository}](${r.url}) | ${r.commitDate.slice(0,10)} · [${r.commit.slice(0,8)}](${r.url}/commit/${r.commit}) | ${r.latestRelease?`[${r.latestRelease.tag}](${r.latestRelease.url}) · ${r.latestRelease.publishedAt.slice(0,10)}`:'未取得正式 Release'} | ${descriptions[r.repository]??'待进一步审查'} |`);}
+md.push('', '## 最新项目也有未完成边界','',
+'`easyeda-agent` v1.4.3 于 UTC 2026-09-07 18:00 发布，即北京时间 9 月 8 日 02:00；Release 含 Windows amd64 CLI、连接器、Skill 与校验和。其发布验证文档同时说明，示例现场仍有 3 条 DRC WARN、图面拥挤以及缺件/职责冲突，且未重新完成整个四层 PCB 流程。因此可以参考连接数据与逐脚核验，不能宣传为已解决我们的全部图面、电气问题。[发行页](https://github.com/zhoushoujianwork/easyeda-agent/releases/tag/v1.4.3)、[发布验证](https://github.com/zhoushoujianwork/easyeda-agent/blob/62c0db9464bfa78cc481b907dca778b24175287c/docs/release-1.4.md)', '',
+'`hyndex/easyeda-mcp` 的 verifyRoundTrip 实现利用几何与并查集重建引脚连接分区，适合加强我们的独立电气校验。本轮已读取固定版本相关源码；模型里的标签、T 形结点、交叉点与实际编辑器导出仍要做转换验证，离线通过不能替代实际工程持久化和图面检查。[核验源码](https://github.com/hyndex/easyeda-mcp/blob/6ca20e753fbffc70138456d830044de46a85d269/mcp/src/planner/schematic/verify.ts)', '',
+'## 这些内容现在如何帮助我们','',
+'| 方式 | 当前状态 | 能做什么 |','|---|---|---|',
+'| 固定版本资料/源码检索 | **本轮已实现并实际调用** | 列仓库、按路径搜索、读取指定行，返回固定 SHA、来源 URL、文件哈希及有界输出；可供 Codex 通过本地工具调用 |',
+'| 纯计算或规划模块 | 尚未移植运行 | 可将电源树、几何、BOM/导出校验等适配为本地模块；先核查许可、输入模型及依赖，再以我们已知故障做回归 |',
+'| 社区 MCP/CLI 的实时编辑 | 尚未安装/启用 | 需匹配连接器、客户端版本、Windows 环境，统一工程定位和写入队列；不会只因仓库存在就自动变成当前可调用工具 |',
+'| 官方 @jlceda/mcli 框架 | 已查代码目录与 README，未安装 | 可让我们同一组经过核验的操作同时提供 CLI/MCP 接口，减少两套参数和行为漂移 |','',
+'已添加工具：[`tools/reference-hub.mjs`](../tools/reference-hub.mjs)。依赖 Node 18+ 的内置 fetch；无 npm 依赖。仅下载文本、不会执行上游代码、不会写编辑器。示例：','',
+'```powershell',
+'node tools/reference-hub.mjs list',
+'node tools/reference-hub.mjs files hyndex/easyeda-mcp planner/schematic',
+'node tools/reference-hub.mjs read hyndex/easyeda-mcp mcp/src/planner/schematic/verify.ts 1',
+'node tools/reference-hub.mjs read zhoushoujianwork/easyeda-agent docs/release-1.4.md 1',
+'```','',
+'命令从 easyeda-api 仓库根目录运行。下载缓存位于 .reference-cache/，不提交。它是可调用的资料检索 CLI，不冒充已注册的实时 MCP 服务。','',
+'## 补充到开发清单的新要求','',
+'| 编号 | 要求 | 参考与状态 |','|---|---|---|',
+'| L01 | canonical 引脚/网络/NC 数据与功能 Role 分开，Lib 紧凑组合和最小修改队列 | easyeda-agent；待适配 |',
+'| L02 | 由几何重新计算引脚连接分区，与设计意图比较 | hyndex；待适配，结合现有 B07 |',
+'| L03 | 同一个 schema 和操作处理器同时输出 CLI/MCP | 官方 jlc-mcli；待实现，框架仍 Preview |',
+'| L04 | 布局扫描限制对象数量、输出大小和单次工作量，记录阶段性结果 | InkRoad 的暂停案例；待加到任务执行器 |',
+'| L05 | PNG 结构/尺寸与源图哈希绑定，区分捕获失败、旧图和无效图 | jan-guenter；借鉴校验，不移植其 Linux 启动链 |',
+'| L06 | 版本对齐记录 CLI、daemon、连接器、客户端和工具协议 | easyeda-agent/官方 Gateway；待纳入能力清单 |',
+'| L07 | 固定提交的资料检索入口 | reference-hub.mjs；本轮已实现，list/files/read 验证 |',
+'| L08 | 定期更新时分别核对 release 与默认分支，记录与已用版本差异 | check-latest.mjs；本轮已实现为手动命令，未创建定时任务 |','',
+'本轮不替换已安装的官方 Skill 1.1.28/Gateway 1.0.5，不声明已有 40 项或上述新增项全部实现。主路线图与已有错误状态继续有效。');
+await fs.writeFile(path.join(root,'最新参考与接入建议.md'),md.join('\n')+'\n');
+console.log(JSON.stringify({checked:data.repositories.length,report:'最新参考与接入建议.md'}));

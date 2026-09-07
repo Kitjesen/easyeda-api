@@ -1,0 +1,11 @@
+{
+  "scope": "Documentation/index integrity only; cache presence is reported separately. No source code execution or live editor validation.",
+  "requireCache": false,
+  "referencedItemCachesPresent": 0,
+  "referencedItemCachesAbsent": 40,
+  "items": 40,
+  "groups": 8,
+  "toolIndexEntries": 220,
+  "recordedSourceSnapshots": 45,
+  "errors": []
+}

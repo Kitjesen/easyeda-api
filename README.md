@@ -1,0 +1,62 @@
+# EasyEDA API 协作工具
+
+Kitjesen 的嘉立创专业版 API 工具仓库。保存本地核验层、官方 Bridge 补丁、可重复安装配置、设计经验和固定版本社区参考；电机硬件工程另行管理。
+
+## 当前可用
+
+| 内容 | 状态 |
+|---|---|
+| `eda-verified/` | 工程/图页 UUID 守卫、操作记录、写前源码备份、独立回读、正交线段与源码格式工具；11 项单元测试 |
+| `toolchain/` | 官方 Skill/Bridge **1.1.28** 固定提交 + 本地连接限制/版本识别补丁 v2；安装到本仓库，不自动替换已运行服务 |
+| `tools/reference-hub.mjs` | 19 个已核对上游的固定提交资料检索：list / files / read；可通过命令行调用 |
+| 路线图与社区目录 | 40 项原有待办、220 条工具入口索引和本轮 8 项补充要求；逐项标明实现状态 |
+| 设计指导、错误记录 | 保留历史记录，持续补充；历史硬件附件不在本仓库 |
+
+已记录的实机基线是专业版 **3.2.186**、Gateway **1.0.5**。Skill 更新不等于客户端升级，文档里的 4.2 API 需要实机能力检测。
+
+## 快速使用
+
+需要 Node.js 24 LTS、Git；重新搜索 GitHub 还需要已登录的 GitHub CLI (`gh`)。核验层和参考工具使用 Node 内置模块，无根目录 npm 依赖。
+
+```powershell
+npm test
+npm run check:docs
+node tools/reference-hub.mjs list
+node tools/reference-hub.mjs files hyndex/easyeda-mcp planner/schematic
+node tools/reference-hub.mjs read hyndex/easyeda-mcp mcp/src/planner/schematic/verify.ts 1
+```
+
+在新机器还原官方工具及补丁：
+
+```powershell
+node tools/setup-toolchain.mjs
+```
+
+生成的 `official-skill/` 被 Git 忽略。安装器核对固定提交及补丁前后哈希，按官方锁文件安装依赖，不启动 Bridge，也不修改全局 Codex 配置。若已经有 Bridge，先沿用它；确需从这个副本启动时运行 `official-skill/scripts/start-bridge.ps1`。详细说明见 [工具链说明](toolchain/README.md)。
+
+编辑器操作说明见 [核验工具](eda-verified/README.md)。当前 `read` 模式不是脚本沙箱，不接收不可信代码。写入超时必须先独立查明实际图纸状态，不得自动重复创建。
+
+## 设计与后续开发
+
+- [当前限制与优先修复项](docs/KNOWN-ISSUES.md)
+- [API 设计指导](docs/DESIGN-GUIDE.md)
+- [持续错误记录](docs/ERROR-LOG.md)
+- [API 增强路线图](api-roadmap-20260908/API增强路线图.md)
+- [40 项社区借鉴清单](api-roadmap-20260908/community-reference/社区MCP借鉴与完整功能清单.md)
+- [2026-09-08 最新参考与接入建议](upstream-latest-20260908/最新参考与接入建议.md)
+- [历史原理图设计指导](stm32g431-review-20260907/原理图设计指导.md)、[历史错误与经验](stm32g431-review-20260907/错误与经验记录.md)
+
+社区资料检索已可调用；社区 MCP 写图服务、离线布局算法、电源树及仿真模块尚未接入。不能把列入清单当作已经实现。
+
+手动更新参考目录：
+
+```powershell
+node upstream-latest-20260908/check-latest.mjs
+node upstream-latest-20260908/build-report.mjs
+```
+
+更新会改变目录中的固定版本，先审查差异再提交。原社区 40 项清单保留其原有固定提交，单独维护。
+
+## 资料与来源
+
+[来源说明](docs/PROVENANCE.md) 记录打包范围与上游处理方式。只保存必要的自有工具、补丁、研究索引和说明；社区源文件可按固定 SHA 按需下载。缓存、运行状态、凭据、依赖目录和硬件工程不纳入 Git。

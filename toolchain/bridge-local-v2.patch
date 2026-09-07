@@ -1,0 +1,61 @@
+--- a/scripts/bridge-server.mjs
++++ b/scripts/bridge-server.mjs
+@@ -40,6 +40,12 @@
+ const PORT_END = 49629;
+ const SERVICE_ID = 'easyeda-bridge';
+ const LISTEN_HOST = '127.0.0.1';
++const EDA_ORIGINS = new Set([
++  'https://client',
++  'https://pro.lceda.cn',
++  'https://pro.easyeda.com',
++]);
++const BUILD_INFO = {"bridgeVersion":"1.1.28","upstreamCommit":"8895d98637dab59ed9de10bb2a340e3e4be26d99","localPatchVersion":"2"};
+ 
+ function formatBannerLine(label, value) {
+   return `║  ${`${label}:`.padEnd(12)} ${String(value).padEnd(44)}║`;
+@@ -133,10 +139,12 @@
+ 
+ // ─── HTTP Server (for AI to submit code via HTTP POST) ─────────────
+ const httpServer = createServer(async (req, res) => {
+-  // CORS
+-  res.setHeader('Access-Control-Allow-Origin', '*');
+-  res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
++  // HTTP is the local agent interface; EDA uses /eda over WebSocket.
++  if (req.headers.origin !== undefined || req.headers['sec-fetch-site'] !== undefined) {
++    res.writeHead(403, { 'Content-Type': 'application/json' });
++    res.end(JSON.stringify({ error: 'Browser access to the agent API is disabled' }));
++    return;
++  }
+ 
+   if (req.method === 'OPTIONS') {
+     res.writeHead(204);
+@@ -149,6 +157,7 @@
+     res.writeHead(200, { 'Content-Type': 'application/json' });
+     res.end(JSON.stringify({
+       service: SERVICE_ID,
++      ...BUILD_INFO,
+       status: 'ok',
+       edaConnected: edaClients.size > 0,
+       edaWindowCount: edaClients.size,
+@@ -232,7 +241,19 @@
+ });
+ 
+ // ─── WebSocket Server ───────────────────────────────────────────────
+-const wss = new WebSocketServer({ server: httpServer });
++const wss = new WebSocketServer({
++  server: httpServer,
++  verifyClient({ req }, done) {
++    const origin = req.headers.origin;
++    // Missing Origin supports native extension transports. Opaque/file
++    // origins are accepted only as EDA peers, never as executable agents.
++    const allowed = req.url === '/eda'
++      ? origin === undefined || origin === 'null' || EDA_ORIGINS.has(origin)
++      : req.url === '/agent' && origin === undefined;
++    if (!allowed) console.warn('[WS] Rejected browser origin or unsupported path');
++    done(allowed, allowed ? undefined : 403, allowed ? undefined : 'Forbidden');
++  },
++});
+ 
+ wss.on('connection', (ws, req) => {
+   const clientType = req.url === '/eda' ? 'eda' : 'agent';

@@ -1,0 +1,20 @@
+{
+  "repository": "easyeda/easyeda-enhanced-schematic-skill",
+  "url": "https://github.com/easyeda/easyeda-enhanced-schematic-skill",
+  "checkedAt": "2026-09-07T20:04:57.841Z",
+  "archived": false,
+  "defaultBranch": "main",
+  "license": null,
+  "pushedAt": "2026-07-31T13:17:24Z",
+  "commit": "0c4b9a0ad94d532923dee5c828a6efa7444f4506",
+  "commitDate": "2026-07-31T13:17:24Z",
+  "commitTitle": "chore: 补充工程应用案例链接",
+  "latestRelease": null,
+  "releaseLookupError": "Command failed: gh api repos/easyeda/easyeda-enhanced-schematic-skill/releases/latest\ngh: Not Found (HTTP 404)\n",
+  "treeTruncated": false,
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "references/esp32-s3-debugger-example.md"
+  ]
+}

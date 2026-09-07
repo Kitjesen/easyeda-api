@@ -1,0 +1,21 @@
+node_modules/
+official-skill/
+.reference-cache/
+eda-verified/state/
+*.log
+*.pid
+.env
+.env.*
+!.env.example
+*.epro
+*.epro2
+*.eext
+local-runtime.json
+.DS_Store
+Thumbs.db
+# Rebuildable third-party source caches
+api-roadmap-20260908/**/*.txt
+api-roadmap-20260908/**/*.source.md
+api-roadmap-20260908/**/*.source.json
+upstream-latest-20260908/**/*.source.md
+upstream-latest-20260908/**/*.source.json

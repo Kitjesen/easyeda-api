@@ -1,0 +1,231 @@
+{
+  "scope": "Source hashes before portable documentation edits; no hardware exports or runtime state",
+  "capturedAt": "2026-09-07T20:20:31.8812410Z",
+  "files": [
+    {
+      "sha256": "de14c4df075066240582ad8ac3affeaff20f51a3b3cdca21e381dc5a16e8f74f",
+      "path": "eda-verified/cli.mjs"
+    },
+    {
+      "sha256": "dadae98ed60d2a2127251c0671dcc7807f0f13583fcbc65d284e8b83d22ff046",
+      "path": "eda-verified/geometry.mjs"
+    },
+    {
+      "sha256": "5f63ec01295a9464e42c1f3e6b1f8f4ff3ec8f026d74f2ac4b5a04cea8bd2a5a",
+      "path": "eda-verified/lib.mjs"
+    },
+    {
+      "sha256": "dcd340498dca4eccfb531fa988eac83ce57be1e53ee10442f4e24b10984c4bd4",
+      "path": "eda-verified/lib.test.mjs"
+    },
+    {
+      "sha256": "60e95e4c30e59ba9e8b20d3ed7a1d700bd62101f6cfff20842197d90b83ba548",
+      "path": "eda-verified/README.md"
+    },
+    {
+      "sha256": "71b4347149b92bcd7ec41f10d2569c145ebd92384914feddc7d7bb90064d076e",
+      "path": "eda-verified/source.mjs"
+    },
+    {
+      "sha256": "521ace83964db2cd334f41b3370bbec76b906df350e9441db20ebef5150c20bd",
+      "path": "api-roadmap-20260908/API增强路线图.md"
+    },
+    {
+      "sha256": "4a3ea00b03a2bc2fc3a52dc1fd556bfa9552d16f2b7e2a6dde32f8d2cbf208ae",
+      "path": "api-roadmap-20260908/collect-evidence.mjs"
+    },
+    {
+      "sha256": "4d53cfe98e2e981b368c05b8ce375a0ea28b7d065b04c8eeb7c1fa8f87b745a1",
+      "path": "api-roadmap-20260908/evidence-manifest.json"
+    },
+    {
+      "sha256": "869c48792bcd55e2d1157c47475b7eef265e209ac8dd357aaf682858ffef63a9",
+      "path": "api-roadmap-20260908/gateway-pr-2.json"
+    },
+    {
+      "sha256": "0fc5c52560f8dc4915bf1b4b9183945b7007559659cbd726ae58a99e3ed82d8c",
+      "path": "api-roadmap-20260908/native-routing-issue-38.json"
+    },
+    {
+      "sha256": "b0db60a3ba81e0a022ef652710b52bd084d7bf635d55e29f3c9e46769895f1e3",
+      "path": "api-roadmap-20260908/official-open-issues.json"
+    },
+    {
+      "sha256": "a33d7e1af9053609c06eab313c2460a8cdbb86182ad639bc5127232146426112",
+      "path": "api-roadmap-20260908/task-patch-commit.json"
+    },
+    {
+      "sha256": "46d8b461463916a00eddf73780429aa9de85ef76b055f11e00989178d12b7ca2",
+      "path": "api-roadmap-20260908/community-reference/社区MCP借鉴与完整功能清单.md"
+    },
+    {
+      "sha256": "b82a84264d60ab3f5a44623d88989ed8d5d49fe6aa9513e03dc1d89139616b06",
+      "path": "api-roadmap-20260908/community-reference/build-reference.mjs"
+    },
+    {
+      "sha256": "042468412dc5f72be3027a96f5fcc3a358d4eb94cc24cd841519a757b5865dd2",
+      "path": "api-roadmap-20260908/community-reference/collect-repos.mjs"
+    },
+    {
+      "sha256": "8476b49948f30dff40559ab9441ef810cb53a964317f4929bc422586788a10c0",
+      "path": "api-roadmap-20260908/community-reference/collect-sources.mjs"
+    },
+    {
+      "sha256": "33e6845fee0a5ab4d5325ca19c30461eb263e76fbddc7a2859e4ffda9b2de711",
+      "path": "api-roadmap-20260908/community-reference/community-backlog.json"
+    },
+    {
+      "sha256": "b9aa55020d8da0238753f8fb3922a0ae78fc76ed58bdb8b14641448cdb84ac04",
+      "path": "api-roadmap-20260908/community-reference/community-tool-index.csv"
+    },
+    {
+      "sha256": "b150e97c33c466dacf2f282502de658f3ceb3f0cb502c41dc47f84c3eb029650",
+      "path": "api-roadmap-20260908/community-reference/repository-discovery.json"
+    },
+    {
+      "sha256": "faa445077904f840019e51cc0a5d586c7b02d9aacccf393a62997b1d697c9e6f",
+      "path": "api-roadmap-20260908/community-reference/source-manifest.json"
+    },
+    {
+      "sha256": "4dde039e9c143280fcdf61acaf29865d9beb039d335d0401ac4420331dc81ad9",
+      "path": "api-roadmap-20260908/community-reference/verify-documentation.mjs"
+    },
+    {
+      "sha256": "d0779a306cb1caa1e5c611ae404995b32abf918baec42b077f438ee5d74d2c99",
+      "path": "api-roadmap-20260908/community-reference/biosshot__easyeda-copilot/index.json"
+    },
+    {
+      "sha256": "90006988b1e9208dff77fa1cfc98d2bccd20865991f164424d171d0958f10f1d",
+      "path": "api-roadmap-20260908/community-reference/cheewee2000__easyeda-mcp/index.json"
+    },
+    {
+      "sha256": "426c13aab214d084a9d7e1a102c26fdbac200d73db4b3056a013f949b027e1f6",
+      "path": "api-roadmap-20260908/community-reference/Dogmeat88__EasyEDA-MCP/index.json"
+    },
+    {
+      "sha256": "d62eb6272a4d6f3e37d25d1c66d6a3036252dc55a956f888674e1a7c69dc5334",
+      "path": "api-roadmap-20260908/community-reference/oaslananka__easyeda-mcp-pro/index.json"
+    },
+    {
+      "sha256": "99528c7689fd21214568fdcd05dabe8d747ad997573f2cd51c76f2d1ddd9226d",
+      "path": "api-roadmap-20260908/community-reference/Spectoda__easyeda-mcp/index.json"
+    },
+    {
+      "sha256": "097832b5d675ac684e19e0f2814d75d9680e0e578477556fe063fea8ccddffc0",
+      "path": "upstream-latest-20260908/最新参考与接入建议.md"
+    },
+    {
+      "sha256": "cb973991e88247abaed6aea7277f97d1168dbde9022290520fd828373e4e71e6",
+      "path": "upstream-latest-20260908/build-report.mjs"
+    },
+    {
+      "sha256": "5eec039ca667850e42d2a78e318c4d8fe4ff8fd48d89c859290f4459fbac7dfb",
+      "path": "upstream-latest-20260908/check-latest.mjs"
+    },
+    {
+      "sha256": "6655e7152399bb11e81fefef46f8cb49f0ee2ff877aaf25f3c05efdb381313aa",
+      "path": "upstream-latest-20260908/discovery.json"
+    },
+    {
+      "sha256": "4b2cdc0f08c8004393d5f6a5d70179792217c06a2232c9ba0ed1e995d267a7bc",
+      "path": "upstream-latest-20260908/latest.json"
+    },
+    {
+      "sha256": "22e40095f53d3d310e71e0b29569ca2238324c77d0359d9beb70a2e076860628",
+      "path": "upstream-latest-20260908/Atmel2005__EasyEDA_MCP/index.json"
+    },
+    {
+      "sha256": "4c7d42abbd416e83fb3a6998749aaa36a433c89f91408a2ae367efda82655194",
+      "path": "upstream-latest-20260908/biosshot__easyeda-copilot/index.json"
+    },
+    {
+      "sha256": "0b65897876f9b4b4b09c7370c0483ee8955f31cf8bb2615151f82e40d1a69852",
+      "path": "upstream-latest-20260908/carter-howell__pcb-designer/index.json"
+    },
+    {
+      "sha256": "23857add3996d52a6c6d5a8fd28ffc0e9ea01904e20526e226f55681e53ff0c7",
+      "path": "upstream-latest-20260908/cheewee2000__easyeda-mcp/index.json"
+    },
+    {
+      "sha256": "5336acd6e6769036c409be5beb9acb2d75ae6bbedd6e8dff42b506d498577941",
+      "path": "upstream-latest-20260908/Dogmeat88__EasyEDA-MCP/index.json"
+    },
+    {
+      "sha256": "c10c416d8c6a006e95d99ddd2c631acc1f855d295d3c1746a5fa34de2bf65f95",
+      "path": "upstream-latest-20260908/easyeda__easyeda-api-skill/index.json"
+    },
+    {
+      "sha256": "0caf6af75898ad895889b5c0c6bd539df845c096eff3ffc7e7f8df87f0fce6fe",
+      "path": "upstream-latest-20260908/easyeda__easyeda-enhanced-schematic-skill/index.json"
+    },
+    {
+      "sha256": "4866fa74ae1cf86e7da7cb1074c47b49f67001624966d76c875b8c86cfc49c69",
+      "path": "upstream-latest-20260908/easyeda__eext-run-api-gateway/index.json"
+    },
+    {
+      "sha256": "c7c78b9899e0a1f3cd31976a1953093efd043666a3005ac24ddb29ffeee0780a",
+      "path": "upstream-latest-20260908/easyeda__jlc-mcli/index.json"
+    },
+    {
+      "sha256": "b5cc5ca79cada5dfe0f926c8cade2b8e149ae5457018da8834917c06e8bcc87b",
+      "path": "upstream-latest-20260908/hiroki-sawada-a__easy_eda_mcp/index.json"
+    },
+    {
+      "sha256": "c7bcd32ea3d54741b121910d212a5192226e989e5a0d43c5ea823922efd830c9",
+      "path": "upstream-latest-20260908/hyndex__easyeda-mcp/index.json"
+    },
+    {
+      "sha256": "15bcc7052fc5cd14faf6eaf7435ff3588c5f7b396e6f7c7f3407985e32462efe",
+      "path": "upstream-latest-20260908/InkRoad__jlc-mcp/index.json"
+    },
+    {
+      "sha256": "fc844a36d56db16dc0a02a7e6560541662deda9c4b58cc4e3317f27e6a1a7f08",
+      "path": "upstream-latest-20260908/jan-guenter__easyeda-pro-agent-plugin/index.json"
+    },
+    {
+      "sha256": "e660e311ee105e2fa3a03ce7cda9b2a1119bcd2f45e9e598c0bafc59ceec0955",
+      "path": "upstream-latest-20260908/oaslananka__easyeda-mcp-pro/index.json"
+    },
+    {
+      "sha256": "3a90c1aa9071d7fd70b31c62726ccd807357dc37372337d0f8251d197d87b151",
+      "path": "upstream-latest-20260908/salitronic__eda-agent/index.json"
+    },
+    {
+      "sha256": "953f2a22418fb19d6d29184622eeb694c80426d9cd9dbc88195f0c0118d6207c",
+      "path": "upstream-latest-20260908/sheares__easyeda-mcp-fix/index.json"
+    },
+    {
+      "sha256": "00ffe36d8bfacd9bcc4143387e27872cce5f9465467e094659563fea64b8fb15",
+      "path": "upstream-latest-20260908/Spectoda__easyeda-mcp/index.json"
+    },
+    {
+      "sha256": "486f825b92f1a432fd3d4153df8b3038626bd8e99c5a092e0262f76c1f8c7477",
+      "path": "upstream-latest-20260908/VLab-Software__easyeda_mcp/index.json"
+    },
+    {
+      "sha256": "0f69467c9f51f4ef7093cacd4a506dd6527f8163a978b1a9a1f7ab35c9fba989",
+      "path": "upstream-latest-20260908/zhoushoujianwork__easyeda-agent/index.json"
+    },
+    {
+      "sha256": "7c55c31910a2e94b6d1bd8acf67b5eacafecc637438dadde7e8920af1c769755",
+      "path": "tools/reference-hub.mjs"
+    },
+    {
+      "sha256": "81d005ba0a7bddce56abd299ff2405485069559d4cea1439214715a158ea9bb7",
+      "path": "stm32g431-review-20260907/原理图设计指导.md"
+    },
+    {
+      "sha256": "5c2ce6f9e305ca304de6d8ec49ac74c145c71fd18f264e5cc48b04ba90b44ebb",
+      "path": "stm32g431-review-20260907/错误与经验记录.md"
+    },
+    {
+      "sha256": "e42897919e0676cdd763a201f97db70d1fd1236b9082cd869df72e43a6e924c3",
+      "path": "skill-upgrade-20260908/官方工具全面更新记录.md"
+    },
+    {
+      "sha256": "d24a341a080a41e206dce0f4468cf42dc072c3592f851839743f567736a3e0e5",
+      "path": "upstream-comparison-20260908/官方Skill与本地方案对比.md"
+    }
+  ],
+  "source": "Previous local jlceda-connection API workspace"
+}

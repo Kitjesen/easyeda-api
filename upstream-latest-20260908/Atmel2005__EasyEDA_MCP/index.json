@@ -1,0 +1,24 @@
+{
+  "repository": "Atmel2005/EasyEDA_MCP",
+  "url": "https://github.com/Atmel2005/EasyEDA_MCP",
+  "checkedAt": "2026-09-07T20:05:06.691Z",
+  "archived": false,
+  "defaultBranch": "main",
+  "license": "MIT",
+  "pushedAt": "2026-07-01T15:31:11Z",
+  "commit": "ca07b06f0e5566c5f44a8dac43a87a458d1bd49f",
+  "commitDate": "2026-07-01T15:31:08Z",
+  "commitTitle": "Correct extension installation instructions in all languages",
+  "latestRelease": null,
+  "releaseLookupError": "Command failed: gh api repos/Atmel2005/EasyEDA_MCP/releases/latest\ngh: Not Found (HTTP 404)\n",
+  "treeTruncated": false,
+  "files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "easyeda_mcp.py",
+    "easyeda_plugin/easyeda_plugin.eext",
+    "easyeda_plugin/easyeda_plugin.zip",
+    "install.mp4"
+  ]
+}

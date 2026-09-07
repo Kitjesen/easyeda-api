@@ -1,0 +1,90 @@
+{
+  "retrievedAt": "2026-09-07T19:31:07.372Z",
+  "scope": "Read-only research; downloaded source retained as text, not executed. No editor mutation or runtime update.",
+  "sources": [
+    {
+      "name": "official-open-issues.json",
+      "url": "https://api.github.com/repos/easyeda/easyeda-api-skill/issues?state=open&per_page=30",
+      "bytes": 68341,
+      "retrievedAt": "2026-09-07T19:31:07.349Z"
+    },
+    {
+      "name": "gateway-pr-2.json",
+      "url": "https://api.github.com/repos/easyeda/eext-run-api-gateway/pulls/2",
+      "bytes": 19339,
+      "retrievedAt": "2026-09-07T19:31:07.326Z"
+    },
+    {
+      "name": "task-patch-commit.json",
+      "url": "https://api.github.com/repos/asmoyou/easyeda-api-skill/commits/2c0a8a5d805d88a6c96fef8ee71184668afdfded",
+      "bytes": 59729,
+      "retrievedAt": "2026-09-07T19:31:07.289Z"
+    },
+    {
+      "name": "proposed-execution-tasks.mjs.txt",
+      "url": "https://raw.githubusercontent.com/asmoyou/easyeda-api-skill/2c0a8a5d805d88a6c96fef8ee71184668afdfded/scripts/execution-tasks.mjs",
+      "bytes": 2944,
+      "retrievedAt": "2026-09-07T19:31:07.177Z"
+    },
+    {
+      "name": "community-tool-schemas.ts.txt",
+      "url": "https://raw.githubusercontent.com/Dogmeat88/EasyEDA-MCP/main/src/mcp-tool-schemas.ts",
+      "bytes": 17857,
+      "retrievedAt": "2026-09-07T19:31:07.093Z"
+    },
+    {
+      "name": "community-capabilities.ts.txt",
+      "url": "https://raw.githubusercontent.com/Dogmeat88/EasyEDA-MCP/main/src/bridge-runtime-capabilities.ts",
+      "bytes": 1949,
+      "retrievedAt": "2026-09-07T19:31:07.106Z"
+    },
+    {
+      "name": "native-routing-issue-38.json",
+      "url": "https://api.github.com/repos/easyeda/pro-api-sdk/issues/38",
+      "bytes": 5937,
+      "retrievedAt": "2026-09-07T19:31:07.188Z"
+    }
+  ],
+  "health": [
+    {
+      "port": 49620,
+      "error": "TypeError: fetch failed"
+    },
+    {
+      "port": 49621,
+      "error": "TypeError: fetch failed"
+    },
+    {
+      "port": 49622,
+      "error": "TypeError: fetch failed"
+    },
+    {
+      "port": 49623,
+      "error": "TypeError: fetch failed"
+    },
+    {
+      "port": 49624,
+      "error": "TypeError: fetch failed"
+    },
+    {
+      "port": 49625,
+      "error": "TypeError: fetch failed"
+    },
+    {
+      "port": 49626,
+      "error": "TypeError: fetch failed"
+    },
+    {
+      "port": 49627,
+      "error": "TypeError: fetch failed"
+    },
+    {
+      "port": 49628,
+      "error": "TypeError: fetch failed"
+    },
+    {
+      "port": 49629,
+      "error": "TypeError: fetch failed"
+    }
+  ]
+}

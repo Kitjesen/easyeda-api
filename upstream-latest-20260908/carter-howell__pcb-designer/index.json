@@ -1,0 +1,24 @@
+{
+  "repository": "carter-howell/pcb-designer",
+  "url": "https://github.com/carter-howell/pcb-designer",
+  "checkedAt": "2026-09-07T20:06:39.853Z",
+  "archived": false,
+  "defaultBranch": "main",
+  "license": null,
+  "pushedAt": "2026-09-06T22:03:20Z",
+  "commit": "ced8a8161d6c2ece29202542865121df34541d5e",
+  "commitDate": "2026-09-06T22:03:18Z",
+  "commitTitle": "Focus README on project work",
+  "latestRelease": null,
+  "releaseLookupError": "Command failed: gh api repos/carter-howell/pcb-designer/releases/latest\ngh: Not Found (HTTP 404)\n",
+  "treeTruncated": false,
+  "files": [
+    ".gitignore",
+    "README.md",
+    "media/manufacturing-qa-full-board.png",
+    "media/manufacturing-qa-silkscreen.png",
+    "media/manufacturing-qa-top-copper.png",
+    "media/ollama-mcp-launcher-icon.png",
+    "media/simple-led-board-preview.png"
+  ]
+}

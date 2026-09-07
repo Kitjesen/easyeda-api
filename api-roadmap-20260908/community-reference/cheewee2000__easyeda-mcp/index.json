@@ -1,0 +1,22 @@
+{
+  "repo": "cheewee2000/easyeda-mcp",
+  "commit": "094ae4383413dbea0c718692e029cc8e933dd89b",
+  "retrievedAt": "2026-09-07T19:48:48.103Z",
+  "archived": false,
+  "description": "MCP server to control EasyEDA Pro from Claude Code — fast bridge, DRC tools, project/save automation",
+  "paths": [
+    ".gitignore",
+    "README.md",
+    "docs/superpowers/plans/2026-07-13-bridge-speed-and-drc-tools.md",
+    "docs/superpowers/plans/2026-07-13-fork-improvements.md",
+    "docs/superpowers/specs/2026-07-13-bridge-speed-and-drc-tools-design.md",
+    "eda-tools.mjs",
+    "index.mjs",
+    "package-lock.json",
+    "package.json",
+    "smoke-test.mjs",
+    "test/build-code.test.mjs",
+    "test/deep-merge.test.mjs"
+  ],
+  "treeTruncated": false
+}

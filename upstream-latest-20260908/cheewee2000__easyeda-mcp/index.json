@@ -1,0 +1,29 @@
+{
+  "repository": "cheewee2000/easyeda-mcp",
+  "url": "https://github.com/cheewee2000/easyeda-mcp",
+  "checkedAt": "2026-09-07T20:05:01.815Z",
+  "archived": false,
+  "defaultBranch": "main",
+  "license": null,
+  "pushedAt": "2026-07-14T06:54:04Z",
+  "commit": "094ae4383413dbea0c718692e029cc8e933dd89b",
+  "commitDate": "2026-07-14T06:54:03Z",
+  "commitTitle": "docs: README tool table + version for v0.3.0 read/sync tools",
+  "latestRelease": null,
+  "releaseLookupError": "Command failed: gh api repos/cheewee2000/easyeda-mcp/releases/latest\ngh: Not Found (HTTP 404)\n",
+  "treeTruncated": false,
+  "files": [
+    ".gitignore",
+    "README.md",
+    "docs/superpowers/plans/2026-07-13-bridge-speed-and-drc-tools.md",
+    "docs/superpowers/plans/2026-07-13-fork-improvements.md",
+    "docs/superpowers/specs/2026-07-13-bridge-speed-and-drc-tools-design.md",
+    "eda-tools.mjs",
+    "index.mjs",
+    "package-lock.json",
+    "package.json",
+    "smoke-test.mjs",
+    "test/build-code.test.mjs",
+    "test/deep-merge.test.mjs"
+  ]
+}

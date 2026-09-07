@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/easyeda/easyeda-api-skill.git",
+  "commit": "8895d98637dab59ed9de10bb2a340e3e4be26d99",
+  "version": "1.1.28",
+  "localPatchVersion": "2",
+  "file": "scripts/bridge-server.mjs",
+  "upstreamSha256": "33cbd91c5b36077a3e30aab2fa2df5402637fe612fa9ab8fe2e8473ce2024d96",
+  "patchedSha256": "6144b1b3358b0897c2505ae38d196e03a4d4a94cf17d3a2337f205a925923c07",
+  "patchSha256": "e4d9ef68b390a5a26cde716e7a02e57bc52d0470220c781dded80fd038be0411",
+  "packageLockSha256": "245f9bd55f20f308ae7cbbb604737aed2f923c32cbbe7e5c8050db973b495d50"
+}

@@ -1,0 +1,366 @@
+{
+  "retrievedAt": "2026-09-07T19:50:06.023Z",
+  "scope": "Static reading only; no installation, remote code execution, or live editor modification",
+  "sources": [
+    {
+      "repo": "Dogmeat88/EasyEDA-MCP",
+      "commit": "aebbd56185cc4debcea9aeb6b1c46b027ae27b5e",
+      "file": "SDK.en.md",
+      "local": "SDK.en.md.txt",
+      "url": "https://raw.githubusercontent.com/Dogmeat88/EasyEDA-MCP/aebbd56185cc4debcea9aeb6b1c46b027ae27b5e/SDK.en.md",
+      "bytes": 3486
+    },
+    {
+      "repo": "Dogmeat88/EasyEDA-MCP",
+      "commit": "aebbd56185cc4debcea9aeb6b1c46b027ae27b5e",
+      "file": "src/schematic-pin-stub.ts",
+      "local": "src__schematic-pin-stub.ts.txt",
+      "url": "https://raw.githubusercontent.com/Dogmeat88/EasyEDA-MCP/aebbd56185cc4debcea9aeb6b1c46b027ae27b5e/src/schematic-pin-stub.ts",
+      "bytes": 1025
+    },
+    {
+      "repo": "Dogmeat88/EasyEDA-MCP",
+      "commit": "aebbd56185cc4debcea9aeb6b1c46b027ae27b5e",
+      "file": "src/host-primitive-finalizer.ts",
+      "local": "src__host-primitive-finalizer.ts.txt",
+      "url": "https://raw.githubusercontent.com/Dogmeat88/EasyEDA-MCP/aebbd56185cc4debcea9aeb6b1c46b027ae27b5e/src/host-primitive-finalizer.ts",
+      "bytes": 683
+    },
+    {
+      "repo": "Dogmeat88/EasyEDA-MCP",
+      "commit": "aebbd56185cc4debcea9aeb6b1c46b027ae27b5e",
+      "file": "src/pcb-pad-geometry.ts",
+      "local": "src__pcb-pad-geometry.ts.txt",
+      "url": "https://raw.githubusercontent.com/Dogmeat88/EasyEDA-MCP/aebbd56185cc4debcea9aeb6b1c46b027ae27b5e/src/pcb-pad-geometry.ts",
+      "bytes": 1682
+    },
+    {
+      "repo": "Dogmeat88/EasyEDA-MCP",
+      "commit": "aebbd56185cc4debcea9aeb6b1c46b027ae27b5e",
+      "file": "src/pcb-pad-anchor.ts",
+      "local": "src__pcb-pad-anchor.ts.txt",
+      "url": "https://raw.githubusercontent.com/Dogmeat88/EasyEDA-MCP/aebbd56185cc4debcea9aeb6b1c46b027ae27b5e/src/pcb-pad-anchor.ts",
+      "bytes": 5901
+    },
+    {
+      "repo": "Dogmeat88/EasyEDA-MCP",
+      "commit": "aebbd56185cc4debcea9aeb6b1c46b027ae27b5e",
+      "file": "src/layout-agent.ts",
+      "local": "src__layout-agent.ts.txt",
+      "url": "https://raw.githubusercontent.com/Dogmeat88/EasyEDA-MCP/aebbd56185cc4debcea9aeb6b1c46b027ae27b5e/src/layout-agent.ts",
+      "bytes": 19465
+    },
+    {
+      "repo": "Dogmeat88/EasyEDA-MCP",
+      "commit": "aebbd56185cc4debcea9aeb6b1c46b027ae27b5e",
+      "file": "src/bridge-session.ts",
+      "local": "src__bridge-session.ts.txt",
+      "url": "https://raw.githubusercontent.com/Dogmeat88/EasyEDA-MCP/aebbd56185cc4debcea9aeb6b1c46b027ae27b5e/src/bridge-session.ts",
+      "bytes": 4333
+    },
+    {
+      "repo": "Dogmeat88/EasyEDA-MCP",
+      "commit": "aebbd56185cc4debcea9aeb6b1c46b027ae27b5e",
+      "file": "src/host-method-timeout.ts",
+      "local": "src__host-method-timeout.ts.txt",
+      "url": "https://raw.githubusercontent.com/Dogmeat88/EasyEDA-MCP/aebbd56185cc4debcea9aeb6b1c46b027ae27b5e/src/host-method-timeout.ts",
+      "bytes": 1680
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "docs/architecture/production-schematic-engine.md",
+      "local": "docs__architecture__production-schematic-engine.md.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/docs/architecture/production-schematic-engine.md",
+      "bytes": 6563
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "docs/professional-schematic-layout.md",
+      "local": "docs__professional-schematic-layout.md.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/docs/professional-schematic-layout.md",
+      "bytes": 8819
+    },
+    {
+      "repo": "Dogmeat88/EasyEDA-MCP",
+      "commit": "aebbd56185cc4debcea9aeb6b1c46b027ae27b5e",
+      "file": "src/mcp-tool-runtime.ts",
+      "local": "src__mcp-tool-runtime.ts.txt",
+      "url": "https://raw.githubusercontent.com/Dogmeat88/EasyEDA-MCP/aebbd56185cc4debcea9aeb6b1c46b027ae27b5e/src/mcp-tool-runtime.ts",
+      "bytes": 49349
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "docs/reference/tools.md",
+      "local": "docs__reference__tools.md.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/docs/reference/tools.md",
+      "bytes": 214456
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "docs/reference/save-export-rollback-safety.md",
+      "local": "docs__reference__save-export-rollback-safety.md.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/docs/reference/save-export-rollback-safety.md",
+      "bytes": 1132
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/schematic-model/pin-semantics.ts",
+      "local": "src__schematic-model__pin-semantics.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/schematic-model/pin-semantics.ts",
+      "bytes": 3039
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/schematic-model/model-validator.ts",
+      "local": "src__schematic-model__model-validator.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/schematic-model/model-validator.ts",
+      "bytes": 7273
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/schematic-model/connectivity-fingerprint.ts",
+      "local": "src__schematic-model__connectivity-fingerprint.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/schematic-model/connectivity-fingerprint.ts",
+      "bytes": 7479
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/layout/planner.ts",
+      "local": "src__layout__planner.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/layout/planner.ts",
+      "bytes": 18768
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/workflows/planner.ts",
+      "local": "src__workflows__planner.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/workflows/planner.ts",
+      "bytes": 11106
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/workflows/schematic-safe-region.ts",
+      "local": "src__workflows__schematic-safe-region.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/workflows/schematic-safe-region.ts",
+      "bytes": 10362
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/workflows/schematic-layout-qa.ts",
+      "local": "src__workflows__schematic-layout-qa.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/workflows/schematic-layout-qa.ts",
+      "bytes": 16931
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/workflows/schematic-post-write-qa.ts",
+      "local": "src__workflows__schematic-post-write-qa.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/workflows/schematic-post-write-qa.ts",
+      "bytes": 11663
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/bom-quality/quality.ts",
+      "local": "src__bom-quality__quality.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/bom-quality/quality.ts",
+      "bytes": 22223
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/power-tree/analysis.ts",
+      "local": "src__power-tree__analysis.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/power-tree/analysis.ts",
+      "bytes": 18978
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/transactions/manager.ts",
+      "local": "src__transactions__manager.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/transactions/manager.ts",
+      "bytes": 23756
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/net-validation/index.ts",
+      "local": "src__net-validation__index.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/net-validation/index.ts",
+      "bytes": 717
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/tools/L2_simulation.ts",
+      "local": "src__tools__L2_simulation.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/tools/L2_simulation.ts",
+      "bytes": 9606
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/vendors/sourcing-facade.ts",
+      "local": "src__vendors__sourcing-facade.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/vendors/sourcing-facade.ts",
+      "bytes": 3268
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/export-manifest/validation.ts",
+      "local": "src__export-manifest__validation.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/export-manifest/validation.ts",
+      "bytes": 30929
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/simulation/runner.ts",
+      "local": "src__simulation__runner.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/simulation/runner.ts",
+      "bytes": 2074
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/tools/L2_workflows.ts",
+      "local": "src__tools__L2_workflows.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/tools/L2_workflows.ts",
+      "bytes": 62846
+    },
+    {
+      "repo": "cheewee2000/easyeda-mcp",
+      "commit": "094ae4383413dbea0c718692e029cc8e933dd89b",
+      "file": "index.mjs",
+      "local": "index.mjs.txt",
+      "url": "https://raw.githubusercontent.com/cheewee2000/easyeda-mcp/094ae4383413dbea0c718692e029cc8e933dd89b/index.mjs",
+      "bytes": 10717
+    },
+    {
+      "repo": "biosshot/easyeda-copilot",
+      "commit": "bf10f7f9c80156abdbf80c45860051026e74b799",
+      "file": "mcp/README.md",
+      "local": "mcp__README.md.txt",
+      "url": "https://raw.githubusercontent.com/biosshot/easyeda-copilot/bf10f7f9c80156abdbf80c45860051026e74b799/mcp/README.md",
+      "bytes": 3028
+    },
+    {
+      "repo": "oaslananka/easyeda-mcp-pro",
+      "commit": "68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9",
+      "file": "src/catalog/validation.ts",
+      "local": "src__catalog__validation.ts.txt",
+      "url": "https://raw.githubusercontent.com/oaslananka/easyeda-mcp-pro/68c86fa7ef7d0b013ed6cc588727eca3baf0e1c9/src/catalog/validation.ts",
+      "bytes": 14410
+    },
+    {
+      "repo": "biosshot/easyeda-copilot",
+      "commit": "bf10f7f9c80156abdbf80c45860051026e74b799",
+      "file": "mcp/docs/schematic/circuit-mod.md",
+      "local": "mcp__docs__schematic__circuit-mod.md.txt",
+      "url": "https://raw.githubusercontent.com/biosshot/easyeda-copilot/bf10f7f9c80156abdbf80c45860051026e74b799/mcp/docs/schematic/circuit-mod.md",
+      "bytes": 2615
+    },
+    {
+      "repo": "biosshot/easyeda-copilot",
+      "commit": "bf10f7f9c80156abdbf80c45860051026e74b799",
+      "file": "mcp/docs/verification.md",
+      "local": "mcp__docs__verification.md.txt",
+      "url": "https://raw.githubusercontent.com/biosshot/easyeda-copilot/bf10f7f9c80156abdbf80c45860051026e74b799/mcp/docs/verification.md",
+      "bytes": 3238
+    },
+    {
+      "repo": "cheewee2000/easyeda-mcp",
+      "commit": "094ae4383413dbea0c718692e029cc8e933dd89b",
+      "file": "package.json",
+      "local": "package.json.txt",
+      "url": "https://raw.githubusercontent.com/cheewee2000/easyeda-mcp/094ae4383413dbea0c718692e029cc8e933dd89b/package.json",
+      "bytes": 487
+    },
+    {
+      "repo": "biosshot/easyeda-copilot",
+      "commit": "bf10f7f9c80156abdbf80c45860051026e74b799",
+      "file": "mcp/src/tools/checkpoint.ts",
+      "local": "mcp__src__tools__checkpoint.ts.txt",
+      "url": "https://raw.githubusercontent.com/biosshot/easyeda-copilot/bf10f7f9c80156abdbf80c45860051026e74b799/mcp/src/tools/checkpoint.ts",
+      "bytes": 1530
+    },
+    {
+      "repo": "biosshot/easyeda-copilot",
+      "commit": "bf10f7f9c80156abdbf80c45860051026e74b799",
+      "file": "mcp/src/operations/manager.ts",
+      "local": "mcp__src__operations__manager.ts.txt",
+      "url": "https://raw.githubusercontent.com/biosshot/easyeda-copilot/bf10f7f9c80156abdbf80c45860051026e74b799/mcp/src/operations/manager.ts",
+      "bytes": 8474
+    },
+    {
+      "repo": "biosshot/easyeda-copilot",
+      "commit": "bf10f7f9c80156abdbf80c45860051026e74b799",
+      "file": "mcp/src/tools/circuit.ts",
+      "local": "mcp__src__tools__circuit.ts.txt",
+      "url": "https://raw.githubusercontent.com/biosshot/easyeda-copilot/bf10f7f9c80156abdbf80c45860051026e74b799/mcp/src/tools/circuit.ts",
+      "bytes": 11676
+    },
+    {
+      "repo": "biosshot/easyeda-copilot",
+      "commit": "bf10f7f9c80156abdbf80c45860051026e74b799",
+      "file": "mcp/src/tools/pcb/pcb-preview.ts",
+      "local": "mcp__src__tools__pcb__pcb-preview.ts.txt",
+      "url": "https://raw.githubusercontent.com/biosshot/easyeda-copilot/bf10f7f9c80156abdbf80c45860051026e74b799/mcp/src/tools/pcb/pcb-preview.ts",
+      "bytes": 7359
+    },
+    {
+      "repo": "Spectoda/easyeda-mcp",
+      "commit": "e0fd129fe405fbcc04019e5f0c7f02fe06fa76f4",
+      "file": "src/server/tool-registry.ts",
+      "local": "src__server__tool-registry.ts.txt",
+      "url": "https://raw.githubusercontent.com/Spectoda/easyeda-mcp/e0fd129fe405fbcc04019e5f0c7f02fe06fa76f4/src/server/tool-registry.ts",
+      "bytes": 733
+    },
+    {
+      "repo": "biosshot/easyeda-copilot",
+      "commit": "bf10f7f9c80156abdbf80c45860051026e74b799",
+      "file": "mcp/src/routing/easyeda-autoroute-adapter.ts",
+      "local": "mcp__src__routing__easyeda-autoroute-adapter.ts.txt",
+      "url": "https://raw.githubusercontent.com/biosshot/easyeda-copilot/bf10f7f9c80156abdbf80c45860051026e74b799/mcp/src/routing/easyeda-autoroute-adapter.ts",
+      "bytes": 34252
+    },
+    {
+      "repo": "Spectoda/easyeda-mcp",
+      "commit": "e0fd129fe405fbcc04019e5f0c7f02fe06fa76f4",
+      "file": "src/bridge/mock.ts",
+      "local": "src__bridge__mock.ts.txt",
+      "url": "https://raw.githubusercontent.com/Spectoda/easyeda-mcp/e0fd129fe405fbcc04019e5f0c7f02fe06fa76f4/src/bridge/mock.ts",
+      "bytes": 495
+    },
+    {
+      "repo": "cheewee2000/easyeda-mcp",
+      "commit": "094ae4383413dbea0c718692e029cc8e933dd89b",
+      "file": "eda-tools.mjs",
+      "local": "eda-tools.mjs.txt",
+      "url": "https://raw.githubusercontent.com/cheewee2000/easyeda-mcp/094ae4383413dbea0c718692e029cc8e933dd89b/eda-tools.mjs",
+      "bytes": 29955
+    },
+    {
+      "repo": "Dogmeat88/EasyEDA-MCP",
+      "commit": "aebbd56185cc4debcea9aeb6b1c46b027ae27b5e",
+      "file": "src/bridge-runtime-capabilities.ts",
+      "local": "src__bridge-runtime-capabilities.ts.txt",
+      "url": "https://raw.githubusercontent.com/Dogmeat88/EasyEDA-MCP/aebbd56185cc4debcea9aeb6b1c46b027ae27b5e/src/bridge-runtime-capabilities.ts",
+      "bytes": 1949
+    }
+  ]
+}

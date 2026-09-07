@@ -1,0 +1,68 @@
+{
+  "checkedAt": "2026-09-07T20:28:05.854Z",
+  "scope": "Portable repository packaging; no live EDA operations",
+  "unitTests": {
+    "passed": 11,
+    "total": 11
+  },
+  "syntaxFiles": 15,
+  "referenceAndInstallerChecks": [
+    {
+      "name": "reference list",
+      "pass": true
+    },
+    {
+      "name": "reference files",
+      "pass": true
+    },
+    {
+      "name": "reject unknown repository",
+      "pass": true
+    },
+    {
+      "name": "reject unlisted path",
+      "pass": true
+    },
+    {
+      "name": "reject invalid line",
+      "pass": true
+    },
+    {
+      "name": "fetch pinned source",
+      "pass": true,
+      "sourceUrl": "https://github.com/hyndex/easyeda-mcp/blob/6ca20e753fbffc70138456d830044de46a85d269/mcp/src/planner/schematic/verify.ts",
+      "sha256": "73f7a45ff6c1cba30f33ef51e995db2d3bf262090e365d05ab976d42e8ce2e0b"
+    },
+    {
+      "name": "use pinned cache",
+      "pass": true
+    },
+    {
+      "name": "refuse existing toolchain target",
+      "pass": true
+    }
+  ],
+  "toolchain": {
+    "commit": "8895d98637dab59ed9de10bb2a340e3e4be26d99",
+    "version": "1.1.28",
+    "localPatchVersion": "2",
+    "patchedSha256": "6144b1b3358b0897c2505ae38d196e03a4d4a94cf17d3a2337f205a925923c07",
+    "dependenciesInstalled": true,
+    "bridgeStarted": false,
+    "globalConfigurationChanged": false,
+    "installedAt": "2026-09-07T20:26:33.032Z"
+  },
+  "uploadReview": {
+    "files": 73,
+    "bytes": 913235,
+    "highConfidenceSecretPatternFindings": 0,
+    "note": "Pattern screening only; not a guarantee of absence of all sensitive information"
+  },
+  "documentation": {
+    "items": 40,
+    "groups": 8,
+    "toolEntries": 220,
+    "errors": 0,
+    "strictMissingCacheRejected": true
+  }
+}
