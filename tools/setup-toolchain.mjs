@@ -57,6 +57,9 @@ await fs.writeFile(path.join(target, '_meta.json'), JSON.stringify({
 }, null, 2) + '\n');
 await fs.writeFile(path.join(target, 'LOCAL-ENVIRONMENT.md'), `# Local API workspace\n\nConnection root: ${root}\n\nRead the workspace AGENTS.md, README.md and docs/KNOWN-ISSUES.md. Use the verified CLI with explicit project/page UUIDs. Reuse the existing Bridge; this setup does not start one. Logs and operation state stay local.\n`);
 await fs.appendFile(path.join(target, 'SKILL.md'), '\n\n## Local environment\n\nSee [LOCAL-ENVIRONMENT.md](LOCAL-ENVIRONMENT.md) for this checkout.\n');
+await fs.mkdir(path.join(target, 'references'), { recursive: true });
+await fs.copyFile(path.join(root, 'docs/SCHEMATIC-EDITING-NOTES.md'), path.join(target, 'references/schematic-editing-practices.md'));
+await fs.appendFile(path.join(target, 'SKILL.md'), '\n## Schematic editing and layout\n\nBefore editing an existing schematic, arranging components or labels, or auditing drawing readability, read [schematic editing practices](references/schematic-editing-practices.md). It covers complete object-group moves, label/network semantics, uncertain writes, and independent electrical, native-render, and export verification. The recorded client behavior is version-specific.\n');
 run(process.execPath, ['--check', path.join(target, manifest.file)]);
 if (!skipDeps) {
   console.log('Installing dependencies using the official lockfile (lifecycle scripts disabled).');

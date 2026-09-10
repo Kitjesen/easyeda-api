@@ -46,6 +46,7 @@ node tools/setup-toolchain.mjs
 - [PCB 专题及优先接入顺序](pcb-knowledge/README.md)、[PCB 设计指导](pcb-knowledge/PCB-DESIGN-GUIDE.md)
 - [当前限制与优先修复项](docs/KNOWN-ISSUES.md)
 - [API 设计指导](docs/DESIGN-GUIDE.md)
+- [原理图排版、写入与验收注意事项](docs/SCHEMATIC-EDITING-NOTES.md)：安装工具链时一并纳入官方 Skill 的参考文件与入口
 - [持续错误记录](docs/ERROR-LOG.md)
 - [API 增强路线图](api-roadmap-20260908/API增强路线图.md)
 - [40 项社区借鉴清单](api-roadmap-20260908/community-reference/社区MCP借鉴与完整功能清单.md)

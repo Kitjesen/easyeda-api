@@ -15,3 +15,5 @@
 `local-additions/scripts/verify-bridge.mjs` 是网络隔离规则检查工具，会建立测试 WebSocket 会话；只在没有真实 EDA 会话的隔离测试 Bridge 上运行，避免干扰现场窗口发现。它不验证电路设计或持久化。
 
 `SKILL.md` 安装时保留官方正文，追加本地环境说明链接；原始官方文件和本地变更职责分开记录。当前机器已注册的全局 Skill 不因本仓库建立而被替换。
+
+原理图注意事项由 [docs/SCHEMATIC-EDITING-NOTES.md](../docs/SCHEMATIC-EDITING-NOTES.md) 维护。安装器将其复制到生成的 Skill 内 `references/schematic-editing-practices.md`，并在 `SKILL.md` 添加适用任务入口。它记录已观察到的排版与 API 操作经验，不改变官方 Bridge 或自动修复已知 P0 问题。已安装副本需同步该参考文件及入口才能取得后续文档更新；不必因此重启服务。
