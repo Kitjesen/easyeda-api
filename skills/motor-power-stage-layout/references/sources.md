@@ -1,11 +1,11 @@
 # 来源与使用范围
 
-核对日期：2026-09-08。以下为厂商原始文档及工具官方说明；版本以本次读到的标题/修订为准，不声称旧版笔记是最新 PCB 产品设计。本 Skill 的表格、执行步骤和算例为项目整理，没有复制上游完整手册或自动安装上游程序。
+基础核对日期：2026-09-08；2026-09-11重新读取下表前两份TI原文，补核相单元、驱动回路及输出/接口的适用边界，其余来源未在该次更新中逐一重查。以下为厂商原始文档及工具官方说明；版本以本次读到的标题/修订为准，不声称旧版笔记是最新 PCB 产品设计。本 Skill 的表格、执行步骤和算例为项目整理，没有复制上游完整手册或自动安装上游程序。
 
 | 来源 | 本次核对范围 | 如何使用及边界 |
 |---|---|---|
-| [TI SLVA959B — Best Practices for Board Layout of Motor Drivers](https://www.ti.com/lit/an/slva959b/slva959b.pdf) | Rev B，2021-10；热、旁路、功率器件、驱动与采样布局章节 | 作为回路设计依据；按当前器件/封装落实，示意图尺寸和阻容值不直接照抄 |
-| [TI DRV835x 数据手册](https://www.ti.com/lit/ds/symlink/drv8350.pdf) | SLVSDY6A，2019-06；变体、引脚、应用/电源/布局章节 | DRV8350/8353、S/H 与 R 变体逐一核对；实际器件选定后重新确认最新适用修订 |
+| [TI SLVA959B — Best Practices for Board Layout of Motor Drivers](https://www.ti.com/lit/an/slva959b/slva959b.pdf) | Rev B，2021-10；本次补核§4（pp.16–17）、§5（pp.19–22）、§6.2–6.3（pp.25–29）、§7（pp.30–34），并查看p.25两类半桥图 | 按真实封装和完整回路落实重复相单元；§7对称建议属于采样布局，不能扩展为整板所有MOS同向；通用栅极线宽与旁路距离建议不等于本板载流或布局验收阈值 |
+| [TI DRV835x 数据手册](https://www.ti.com/lit/ds/symlink/drv8350.pdf) | SLVSDY6A，2019-06；本次重核§11.1（p.78）和§11.2图75（p.79） | 沿实际变体的GH/GL与SH/SL/SP追踪完整去回，核对VDRAIN及各电容引脚对；图75含CSA和Buck引脚，不能按图示为DRV8350添加不存在的功能 |
 | [TI SLPA020 — Tips for Successfully Paralleling Power MOSFETs](https://www.ti.com/document-viewer/lit/html/slpa020) | 2022；并联驱动、路径与均流建议 | 支持独立栅阻、对称路径与热条件检查，不提供本板并联后电流额定 |
 | [TI SBAA460 — Shunt Resistor Selection](https://www.ti.com/document-viewer/lit/html/sbaa460) | 分流电阻功率、端子温度、Kelvin 及选择条件 | 用于分流器件和取样检查；前端仍读本板真实型号的输入/滤波要求 |
 | [TI SLVAFT0 — Bulk Capacitor Sizing for DC Motor Drive Applications](https://www.ti.com/lit/an/slvaft0/slvaft0.pdf) | 电容纹波、储能及简化模型章节 | 原应用条件不能不加转换地覆盖三相 FOC 电容 RMS 与回灌 |
